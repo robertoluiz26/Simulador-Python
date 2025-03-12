@@ -1,0 +1,432 @@
+model.Status == GRB.TIME_LIMIT and model.solCount > 0.
+the bound is 5719972548.053333
+The MIPGap is 0.028966072904298278
+model.Status == GRB.TIME_LIMIT and model.solCount > 0 in the arquive: ./arquivos_otimizacao_woc/gurobi_otimizacao_9_0_5530464.lp
+the bound is 4383780171.5
+The MIPGap is 0.0018647671039181259
+model.Status == GRB.TIME_LIMIT and model.solCount > 0 in the arquive: ./arquivos_otimizacao_woc/gurobi_otimizacao_9_0_2039348.lp
+the bound is 2645480180.25
+The MIPGap is 0.006743148977095432
+model.Status == GRB.TIME_LIMIT and model.solCount > 0 in the arquive: ./arquivos_otimizacao_woc/gurobi_otimizacao_9_0_5520816.lp
+the bound is 3402970132.5
+The MIPGap is 0.008559726008999626
+model.Status == GRB.TIME_LIMIT and model.solCount > 0 in the arquive: ./arquivos_otimizacao_woc/gurobi_otimizacao_9_0_2610135.lp
+the bound is 2938010126.535714
+The MIPGap is 0.005500533039818936
+model.Status == GRB.TIME_LIMIT and model.solCount > 0 in the arquive: ./arquivos_otimizacao_woc/gurobi_otimizacao_9_0_4368936.lp
+the bound is 3426140249.883333
+The MIPGap is 0.0005775696256201414
+model.Status == GRB.TIME_LIMIT and model.solCount > 0 in the arquive: ./arquivos_otimizacao_woc/gurobi_otimizacao_9_0_2600655.lp
+the bound is 3001980192.25
+The MIPGap is 0.014823676346163394
+model.Status == GRB.TIME_LIMIT and model.solCount > 0 in the arquive: ./arquivos_otimizacao_woc/gurobi_otimizacao_9_0_4059988.lp
+the bound is 4184370200.7708335
+The MIPGap is 0.02086100305800117
+model.Status == GRB.TIME_LIMIT and model.solCount > 0 in the arquive: ./arquivos_otimizacao_woc/gurobi_otimizacao_9_0_2597994.lp
+the bound is 3427840194.5
+The MIPGap is 0.00022749166129054136
+model.Status == GRB.TIME_LIMIT and model.solCount > 0 in the arquive: ./arquivos_otimizacao_woc/gurobi_otimizacao_9_0_5504515.lp
+the bound is 4087320221.5
+The MIPGap is 0.0021776026437883176
+model.Status == GRB.TIME_LIMIT and model.solCount > 0 in the arquive: ./arquivos_otimizacao_woc/gurobi_otimizacao_9_0_5526891.lp
+the bound is 2797060217.1666665
+The MIPGap is 0.011171346519524457
+model.Status == GRB.TIME_LIMIT and model.solCount > 0 in the arquive: ./arquivos_otimizacao_woc/gurobi_otimizacao_9_0_5511268.lp
+the bound is 3468700175.5
+The MIPGap is 0.004128525282059543
+model.Status == GRB.TIME_LIMIT and model.solCount > 0 in the arquive: ./arquivos_otimizacao_woc/gurobi_otimizacao_9_0_1454986.lp
+the bound is 5239740260.159091
+The MIPGap is 0.0002575706172879313
+model.Status == GRB.TIME_LIMIT and model.solCount > 0 in the arquive: ./arquivos_otimizacao_woc/gurobi_otimizacao_9_0_2622101.lp
+the bound is 2982520222.0
+The MIPGap is 0.0019676005911122615
+model.Status == GRB.TIME_LIMIT and model.solCount > 0 in the arquive: ./arquivos_otimizacao_woc/gurobi_otimizacao_9_0_3789226.lp
+the bound is 4180540203.5
+The MIPGap is 0.004216048797392902
+model.Status == GRB.TIME_LIMIT and model.solCount > 0 in the arquive: ./arquivos_otimizacao_woc/gurobi_otimizacao_9_0_5550136.lp
+the bound is 2730230160.1875
+The MIPGap is 0.0034274794648612296
+model.Status == GRB.TIME_LIMIT and model.solCount > 0 in the arquive: ./arquivos_otimizacao_woc/gurobi_otimizacao_9_0_2609826.lp
+the bound is 2505570183.861111
+The MIPGap is 0.0026748502946381115
+model.Status == GRB.TIME_LIMIT and model.solCount > 0 in the arquive: ./arquivos_otimizacao_woc/gurobi_otimizacao_9_0_4358494.lp
+the bound is 3939980251.0
+The MIPGap is 0.0007785797341972994
+model.Status == GRB.TIME_LIMIT and model.solCount > 0 in the arquive: ./arquivos_otimizacao_woc/gurobi_otimizacao_9_0_874552.lp
+the bound is 4728860184.0625
+The MIPGap is 0.02142012543155844
+model.Status == GRB.TIME_LIMIT and model.solCount > 0 in the arquive: ./arquivos_otimizacao_woc/gurobi_otimizacao_9_0_3791762.lp
+the bound is 4892940108.0
+The MIPGap is 0.0036247094301028204
+model.Status == GRB.TIME_LIMIT and model.solCount > 0 in the arquive: ./arquivos_otimizacao_woc/gurobi_otimizacao_9_0_1466334.lp
+the bound is 3353200243.0
+The MIPGap is 0.0002981250182461529
+model.Status == GRB.TIME_LIMIT and model.solCount > 0 in the arquive: ./arquivos_otimizacao_woc/gurobi_otimizacao_9_0_5562931.lp
+the bound is 3068300157.0
+The MIPGap is 0.00042024893793076866
+model.Status == GRB.TIME_LIMIT and model.solCount > 0 in the arquive: ./arquivos_otimizacao_woc/gurobi_otimizacao_9_0_2622039.lp
+the bound is 3928870232.5
+The MIPGap is 0.0010094423597288445
+model.Status == GRB.TIME_LIMIT and model.solCount > 0 in the arquive: ./arquivos_otimizacao_woc/gurobi_otimizacao_9_0_2027368.lp
+the bound is 2485840206.25
+The MIPGap is 0.0004101492130926749
+model.Status == GRB.TIME_LIMIT and model.solCount > 0 in the arquive: ./arquivos_otimizacao_woc/gurobi_otimizacao_9_0_1468476.lp
+the bound is 3639120229.2
+The MIPGap is 0.003922315063424817
+model.Status == GRB.TIME_LIMIT and model.solCount > 0 in the arquive: ./arquivos_otimizacao_woc/gurobi_otimizacao_9_0_4357205.lp
+the bound is 3516620236.0
+The MIPGap is 0.0007728664559436842
+model.Status == GRB.TIME_LIMIT and model.solCount > 0 in the arquive: ./arquivos_otimizacao_woc/gurobi_otimizacao_9_0_3777138.lp
+the bound is 4973045103.0
+The MIPGap is 0.012075293965410272
+model.Status == GRB.TIME_LIMIT and model.solCount > 0 in the arquive: ./arquivos_otimizacao_woc/gurobi_otimizacao_9_0_5527136.lp
+the bound is 3318380179.5
+The MIPGap is 0.03847399924355466
+model.Status == GRB.TIME_LIMIT and model.solCount > 0 in the arquive: ./arquivos_otimizacao_woc/gurobi_otimizacao_9_0_5519095.lp
+the bound is 3500320219.0
+The MIPGap is 0.004748326183757255
+model.Status == GRB.TIME_LIMIT and model.solCount > 0 in the arquive: ./arquivos_otimizacao_woc/gurobi_otimizacao_9_0_5521936.lp
+the bound is 3538650158.0
+The MIPGap is 0.0025509379855502166
+model.Status == GRB.TIME_LIMIT and model.solCount > 0 in the arquive: ./arquivos_otimizacao_woc/gurobi_otimizacao_9_0_2607486.lp
+the bound is 3346410135.1666665
+The MIPGap is 0.009413259641749473
+model.Status == GRB.TIME_LIMIT and model.solCount > 0 in the arquive: ./arquivos_otimizacao_woc/gurobi_otimizacao_9_0_2600030.lp
+the bound is 2912060190.0
+The MIPGap is 0.0009434552603249225
+model.Status == GRB.TIME_LIMIT and model.solCount > 0 in the arquive: ./arquivos_otimizacao_woc/gurobi_otimizacao_9_0_3763843.lp
+the bound is 6828790124.500001
+The MIPGap is 0.0050861756699165026
+model.Status == GRB.TIME_LIMIT and model.solCount > 0 in the arquive: ./arquivos_otimizacao_woc/gurobi_otimizacao_9_0_5529304.lp
+the bound is 3747230134.666667
+The MIPGap is 0.009978858175889877
+model.Status == GRB.TIME_LIMIT and model.solCount > 0 in the arquive: ./arquivos_otimizacao_woc/gurobi_otimizacao_9_0_2610578.lp
+the bound is 3656990201.4166665
+The MIPGap is 0.009109598671416197
+model.Status == GRB.TIME_LIMIT and model.solCount > 0 in the arquive: ./arquivos_otimizacao_woc/gurobi_otimizacao_9_0_5550035.lp
+the bound is 3758470165.4615383
+The MIPGap is 0.012322086941598472
+model.Status == GRB.TIME_LIMIT and model.solCount > 0 in the arquive: ./arquivos_otimizacao_woc/gurobi_otimizacao_9_0_2622996.lp
+the bound is 2286970188.0
+The MIPGap is 0.003872177466055657
+model.Status == GRB.TIME_LIMIT and model.solCount > 0 in the arquive: ./arquivos_otimizacao_woc/gurobi_otimizacao_9_0_5533541.lp
+the bound is 1956480211.357143
+The MIPGap is 0.0006639992879655528
+model.Status == GRB.TIME_LIMIT and model.solCount > 0 in the arquive: ./arquivos_otimizacao_woc/gurobi_otimizacao_9_0_5494822.lp
+the bound is 3845710128.0
+The MIPGap is 0.002376211060681203
+model.Status == GRB.TIME_LIMIT and model.solCount > 0 in the arquive: ./arquivos_otimizacao_woc/gurobi_otimizacao_9_0_5506890.lp
+the bound is 3924830131.5
+The MIPGap is 0.008220124396240062
+model.Status == GRB.TIME_LIMIT and model.solCount > 0 in the arquive: ./arquivos_otimizacao_woc/gurobi_otimizacao_9_0_3771859.lp
+the bound is 4790260172.435859
+The MIPGap is 0.010381135225836995
+model.Status == GRB.TIME_LIMIT and model.solCount > 0 in the arquive: ./arquivos_otimizacao_woc/gurobi_otimizacao_9_0_5533200.lp
+the bound is 1447170164.0
+The MIPGap is 0.006589901702927277
+model.Status == GRB.TIME_LIMIT and model.solCount > 0 in the arquive: ./arquivos_otimizacao_woc/gurobi_otimizacao_9_0_1466215.lp
+the bound is 2877600205.5
+The MIPGap is 0.004500772732176615
+model.Status == GRB.TIME_LIMIT and model.solCount > 0 in the arquive: ./arquivos_otimizacao_woc/gurobi_otimizacao_9_0_5501420.lp
+the bound is 4337240188.666667
+The MIPGap is 0.004886950574345509
+model.Status == GRB.TIME_LIMIT and model.solCount > 0 in the arquive: ./arquivos_otimizacao_woc/gurobi_otimizacao_9_0_875123.lp
+the bound is 5529400200.974359
+The MIPGap is 0.008737675898307398
+model.Status == GRB.TIME_LIMIT and model.solCount > 0 in the arquive: ./arquivos_otimizacao_woc/gurobi_otimizacao_9_0_2608717.lp
+the bound is 2597830171.3333335
+The MIPGap is 0.004082834446528882
+model.Status == GRB.TIME_LIMIT and model.solCount > 0 in the arquive: ./arquivos_otimizacao_woc/gurobi_otimizacao_9_0_5504065.lp
+the bound is 3926990225.5
+The MIPGap is 0.014505142792241214
+model.Status == GRB.TIME_LIMIT and model.solCount > 0 in the arquive: ./arquivos_otimizacao_woc/gurobi_otimizacao_9_0_5548618.lp
+the bound is 3562190235.9791665
+The MIPGap is 0.003449407552932893
+model.Status == GRB.TIME_LIMIT and model.solCount > 0 in the arquive: ./arquivos_otimizacao_woc/gurobi_otimizacao_9_0_4945654.lp
+the bound is 2383540188.3333335
+The MIPGap is 0.004656122889262011
+model.Status == GRB.TIME_LIMIT and model.solCount > 0 in the arquive: ./arquivos_otimizacao_woc/gurobi_otimizacao_9_0_5533391.lp
+the bound is 1958120188.0
+The MIPGap is 0.012461970028196434
+model.Status == GRB.TIME_LIMIT and model.solCount > 0 in the arquive: ./arquivos_otimizacao_woc/gurobi_otimizacao_10_0_3549851.lp
+the bound is 4481090158.0
+The MIPGap is 0.011569319444153979
+model.Status == GRB.TIME_LIMIT and model.solCount > 0 in the arquive: ./arquivos_otimizacao_woc/gurobi_otimizacao_10_0_2464120.lp
+the bound is 3425820176.25
+The MIPGap is 0.004952258424683741
+model.Status == GRB.TIME_LIMIT and model.solCount > 0 in the arquive: ./arquivos_otimizacao_woc/gurobi_otimizacao_10_0_3769531.lp
+the bound is 4407960195.391788
+The MIPGap is 0.008446718639867422
+model.Status == GRB.TIME_LIMIT and model.solCount > 0 in the arquive: ./arquivos_otimizacao_woc/gurobi_otimizacao_10_0_2438451.lp
+the bound is 3270060162.0
+The MIPGap is 0.0011820572951841564
+model.Status == GRB.TIME_LIMIT and model.solCount > 0 in the arquive: ./arquivos_otimizacao_woc/gurobi_otimizacao_10_0_5201003.lp
+the bound is 5732100231.0
+The MIPGap is 0.011476806754430656
+model.Status == GRB.TIME_LIMIT and model.solCount > 0 in the arquive: ./arquivos_otimizacao_woc/gurobi_otimizacao_10_0_5168561.lp
+the bound is 2663070137.7857146
+The MIPGap is 0.012910031415342239
+model.Status == GRB.TIME_LIMIT and model.solCount > 0 in the arquive: ./arquivos_otimizacao_woc/gurobi_otimizacao_10_0_5167203.lp
+the bound is 4388210144.266666
+The MIPGap is 0.0075470718102704165
+model.Status == GRB.TIME_LIMIT and model.solCount > 0 in the arquive: ./arquivos_otimizacao_woc/gurobi_otimizacao_10_0_3545150.lp
+the bound is 6927725175.5
+The MIPGap is 0.010426780383626724
+model.Status == GRB.TIME_LIMIT and model.solCount > 0 in the arquive: ./arquivos_otimizacao_woc/gurobi_otimizacao_10_0_5152629.lp
+the bound is 4321430179.0
+The MIPGap is 0.00531702718775277
+model.Status == GRB.TIME_LIMIT and model.solCount > 0 in the arquive: ./arquivos_otimizacao_woc/gurobi_otimizacao_10_0_5182021.lp
+the bound is 2705140158.345238
+The MIPGap is 0.008485161569464394
+model.Status == GRB.TIME_LIMIT and model.solCount > 0 in the arquive: ./arquivos_otimizacao_woc/gurobi_otimizacao_10_0_5187908.lp
+the bound is 4302860167.781181
+The MIPGap is 0.01805799779619099
+model.Status == GRB.TIME_LIMIT and model.solCount > 0 in the arquive: ./arquivos_otimizacao_woc/gurobi_otimizacao_10_0_5169371.lp
+the bound is 2520900176.0
+The MIPGap is 0.007136605794310348
+model.Status == GRB.TIME_LIMIT and model.solCount > 0 in the arquive: ./arquivos_otimizacao_woc/gurobi_otimizacao_10_0_1369794.lp
+the bound is 4196252222.6011906
+The MIPGap is 0.000963726458043954
+model.Status == GRB.TIME_LIMIT and model.solCount > 0 in the arquive: ./arquivos_otimizacao_woc/gurobi_otimizacao_10_0_4061271.lp
+the bound is 3712860258.022222
+The MIPGap is 0.002528016620004008
+model.Status == GRB.TIME_LIMIT and model.solCount > 0 in the arquive: ./arquivos_otimizacao_woc/gurobi_otimizacao_10_0_5154726.lp
+the bound is 3918890160.2380953
+The MIPGap is 0.013624387008492464
+model.Status == GRB.TIME_LIMIT and model.solCount > 0 in the arquive: ./arquivos_otimizacao_woc/gurobi_otimizacao_10_0_5178663.lp
+the bound is 3058655164.1875
+The MIPGap is 0.012135714480834057
+model.Status == GRB.TIME_LIMIT and model.solCount > 0 in the arquive: ./arquivos_otimizacao_woc/gurobi_otimizacao_10_0_4588669.lp
+the bound is 1434600150.25
+The MIPGap is 0.005586883296983677
+model.Status == GRB.TIME_LIMIT and model.solCount > 0 in the arquive: ./arquivos_otimizacao_woc/gurobi_otimizacao_10_0_5181592.lp
+the bound is 2949870153.4462357
+The MIPGap is 0.029852251937000477
+model.Status == GRB.TIME_LIMIT and model.solCount > 0 in the arquive: ./arquivos_otimizacao_woc/gurobi_otimizacao_10_0_5201272.lp
+the bound is 3096550163.999999
+The MIPGap is 0.0019435414058186905
+model.Status == GRB.TIME_LIMIT and model.solCount > 0 in the arquive: ./arquivos_otimizacao_woc/gurobi_otimizacao_10_0_5150707.lp
+the bound is 2632790164.1666665
+The MIPGap is 0.009436115599669661
+model.Status == GRB.TIME_LIMIT and model.solCount > 0 in the arquive: ./arquivos_otimizacao_woc/gurobi_otimizacao_10_0_2441067.lp
+the bound is 2583070146.25
+The MIPGap is 0.00783187557884937
+model.Status == GRB.TIME_LIMIT and model.solCount > 0 in the arquive: ./arquivos_otimizacao_woc/gurobi_otimizacao_10_0_1887670.lp
+the bound is 2498040180.0
+The MIPGap is 0.000316138733073566
+model.Status == GRB.TIME_LIMIT and model.solCount > 0 in the arquive: ./arquivos_otimizacao_woc/gurobi_otimizacao_10_0_2441252.lp
+the bound is 4145520153.0
+The MIPGap is 0.007158575798861348
+model.Status == GRB.TIME_LIMIT and model.solCount > 0 in the arquive: ./arquivos_otimizacao_woc/gurobi_otimizacao_10_0_5172896.lp
+the bound is 2490165181.0
+The MIPGap is 0.003555342801300418
+model.Status == GRB.TIME_LIMIT and model.solCount > 0 in the arquive: ./arquivos_otimizacao_woc/gurobi_otimizacao_10_0_3793841.lp
+the bound is 3271170154.416667
+The MIPGap is 0.006233872801041959
+model.Status == GRB.TIME_LIMIT and model.solCount > 0 in the arquive: ./arquivos_otimizacao_woc/gurobi_otimizacao_10_0_5145619.lp
+the bound is 2908070203.479167
+The MIPGap is 0.007779248547558067
+model.Status == GRB.TIME_LIMIT and model.solCount > 0 in the arquive: ./arquivos_otimizacao_woc/gurobi_otimizacao_10_0_1078540.lp
+the bound is 4304620155.55
+The MIPGap is 0.01326309157613582
+model.Status == GRB.TIME_LIMIT and model.solCount > 0 in the arquive: ./arquivos_otimizacao_woc/gurobi_otimizacao_10_0_1354149.lp
+the bound is 3373630152.555556
+The MIPGap is 0.01853467476618483
+model.Status == GRB.TIME_LIMIT and model.solCount > 0 in the arquive: ./arquivos_otimizacao_woc/gurobi_otimizacao_10_0_5146564.lp
+the bound is 2131430224.25
+The MIPGap is 0.004934619449938608
+model.Status == GRB.TIME_LIMIT and model.solCount > 0 in the arquive: ./arquivos_otimizacao_woc/gurobi_otimizacao_10_0_5194942.lp
+the bound is 4013810162.25
+The MIPGap is 0.0019295922872839164
+model.Status == GRB.TIME_LIMIT and model.solCount > 0 in the arquive: ./arquivos_otimizacao_woc/gurobi_otimizacao_10_0_2449904.lp
+the bound is 4280540234.4999976
+The MIPGap is 0.0009382399432191857
+model.Status == GRB.TIME_LIMIT and model.solCount > 0 in the arquive: ./arquivos_otimizacao_woc/gurobi_otimizacao_10_0_2453504.lp
+the bound is 4017120221.6416664
+The MIPGap is 0.0035421894707011823
+model.Status == GRB.TIME_LIMIT and model.solCount > 0 in the arquive: ./arquivos_otimizacao_woc/gurobi_otimizacao_10_0_4064135.lp
+the bound is 3081070249.8541665
+The MIPGap is 0.004864122032565969
+model.Status == GRB.TIME_LIMIT and model.solCount > 0 in the arquive: ./arquivos_otimizacao_woc/gurobi_otimizacao_10_0_2442408.lp
+the bound is 2135680181.5
+The MIPGap is 0.00118322302743935
+model.Status == GRB.TIME_LIMIT and model.solCount > 0 in the arquive: ./arquivos_otimizacao_woc/gurobi_otimizacao_10_0_1088626.lp
+the bound is 3165300199.0
+The MIPGap is 0.003645074225609057
+model.Status == GRB.TIME_LIMIT and model.solCount > 0 in the arquive: ./arquivos_otimizacao_woc/gurobi_otimizacao_10_0_2444175.lp
+the bound is 4568680202.0
+The MIPGap is 0.0015603705398845266
+model.Status == GRB.TIME_LIMIT and model.solCount > 0 in the arquive: ./arquivos_otimizacao_woc/gurobi_otimizacao_10_0_4632006.lp
+the bound is 2474280170.3333335
+The MIPGap is 0.00023031037485047982
+model.Status == GRB.TIME_LIMIT and model.solCount > 0 in the arquive: ./arquivos_otimizacao_woc/gurobi_otimizacao_10_0_1905897.lp
+the bound is 2398600180.0
+The MIPGap is 0.00016255923297539432
+model.Status == GRB.TIME_LIMIT and model.solCount > 0 in the arquive: ./arquivos_otimizacao_woc/gurobi_otimizacao_10_0_1090681.lp
+the bound is 2590630153.0000005
+The MIPGap is 0.011077803011694446
+model.Status == GRB.TIME_LIMIT and model.solCount > 0 in the arquive: ./arquivos_otimizacao_woc/gurobi_otimizacao_10_0_2441459.lp
+the bound is 3809220197.3333335
+The MIPGap is 0.0023048512799988463
+model.Status == GRB.TIME_LIMIT and model.solCount > 0 in the arquive: ./arquivos_otimizacao_woc/gurobi_otimizacao_10_0_2438665.lp
+the bound is 3591440160.0
+The MIPGap is 0.004631176737941627
+model.Status == GRB.TIME_LIMIT and model.solCount > 0 in the arquive: ./arquivos_otimizacao_woc/gurobi_otimizacao_10_0_5172178.lp
+the bound is 2460520163.25
+The MIPGap is 0.005348145128633036
+model.Status == GRB.TIME_LIMIT and model.solCount > 0 in the arquive: ./arquivos_otimizacao_woc/gurobi_otimizacao_10_0_5137283.lp
+the bound is 2724490175.5
+The MIPGap is 0.00725838462134246
+model.Status == GRB.TIME_LIMIT and model.solCount > 0 in the arquive: ./arquivos_otimizacao_woc/gurobi_otimizacao_10_0_1360515.lp
+the bound is 3583960192.3159723
+The MIPGap is 0.02571921967748924
+model.Status == GRB.TIME_LIMIT and model.solCount > 0 in the arquive: ./arquivos_otimizacao_woc/gurobi_otimizacao_10_0_5139558.lp
+the bound is 4870790162.5
+The MIPGap is 0.005845576645088197
+model.Status == GRB.TIME_LIMIT and model.solCount > 0 in the arquive: ./arquivos_otimizacao_woc/gurobi_otimizacao_10_0_3821948.lp
+the bound is 3894200197.8061223
+The MIPGap is 0.008925310507900928
+model.Status == GRB.TIME_LIMIT and model.solCount > 0 in the arquive: ./arquivos_otimizacao_woc/gurobi_otimizacao_10_0_1093795.lp
+the bound is 3919860309.7114944
+The MIPGap is 0.03405087313985364
+model.Status == GRB.TIME_LIMIT and model.solCount > 0 in the arquive: ./arquivos_otimizacao_woc/gurobi_otimizacao_10_0_3816373.lp
+the bound is 3149010196.3928576
+The MIPGap is 0.015605200606327354
+model.Status == GRB.TIME_LIMIT and model.solCount > 0 in the arquive: ./arquivos_otimizacao_woc/gurobi_otimizacao_10_0_5176238.lp
+the bound is 3049040170.0000005
+The MIPGap is 0.00150638902722818
+model.Status == GRB.TIME_LIMIT and model.solCount > 0 in the arquive: ./arquivos_otimizacao_woc/gurobi_otimizacao_7_0_3017202.lp
+the bound is 3776980217.0
+The MIPGap is 0.0006244447102839093
+model.Status == GRB.TIME_LIMIT and model.solCount > 0 in the arquive: ./arquivos_otimizacao_woc/gurobi_otimizacao_7_0_6401780.lp
+the bound is 3382300197.25
+The MIPGap is 0.0036439424433274397
+model.Status == GRB.TIME_LIMIT and model.solCount > 0 in the arquive: ./arquivos_otimizacao_woc/gurobi_otimizacao_7_0_1012034.lp
+the bound is 6522180307.49537
+The MIPGap is 0.004496584230923704
+model.Status == GRB.TIME_LIMIT and model.solCount > 0 in the arquive: ./arquivos_otimizacao_woc/gurobi_otimizacao_7_0_4385159.lp
+the bound is 6302590226.6875
+The MIPGap is 0.011408054919384026
+model.Status == GRB.TIME_LIMIT and model.solCount > 0 in the arquive: ./arquivos_otimizacao_woc/gurobi_otimizacao_7_1_4065980.lp
+the bound is 7001040173.0
+The MIPGap is 0.0007036831288494572
+model.Status == GRB.TIME_LIMIT and model.solCount > 0 in the arquive: ./arquivos_otimizacao_woc/gurobi_otimizacao_7_0_3037174.lp
+the bound is 2563080169.3
+The MIPGap is 0.001328654116979865
+model.Status == GRB.TIME_LIMIT and model.solCount > 0 in the arquive: ./arquivos_otimizacao_woc/gurobi_otimizacao_7_0_6429189.lp
+the bound is 2492240171.0
+The MIPGap is 0.0004291419572708555
+model.Status == GRB.TIME_LIMIT and model.solCount > 0 in the arquive: ./arquivos_otimizacao_woc/gurobi_otimizacao_7_1_1017417.lp
+the bound is 8517280109.666666
+The MIPGap is 0.009213070643168338
+model.Status == GRB.TIME_LIMIT and model.solCount > 0 in the arquive: ./arquivos_otimizacao_woc/gurobi_otimizacao_7_0_6425567.lp
+the bound is 2920420207.0588236
+The MIPGap is 0.004295909030103495
+model.Status == GRB.TIME_LIMIT and model.solCount > 0 in the arquive: ./arquivos_otimizacao_woc/gurobi_otimizacao_7_0_6388961.lp
+the bound is 3426640220.8953485
+The MIPGap is 0.0013522661515211719
+model.Status == GRB.TIME_LIMIT and model.solCount > 0 in the arquive: ./arquivos_otimizacao_woc/gurobi_otimizacao_7_0_2378281.lp
+the bound is 2022060265.875
+The MIPGap is 0.0009535279014002062
+model.Status == GRB.TIME_LIMIT and model.solCount > 0 in the arquive: ./arquivos_otimizacao_woc/gurobi_otimizacao_8_0_5312066.lp
+the bound is 2063000168.0
+The MIPGap is 0.0004263735949721949
+model.Status == GRB.TIME_LIMIT and model.solCount > 0 in the arquive: ./arquivos_otimizacao_woc/gurobi_otimizacao_8_0_5886425.lp
+the bound is 3375620221.909091
+The MIPGap is 0.00016290176660276002
+model.Status == GRB.TIME_LIMIT and model.solCount > 0 in the arquive: ./arquivos_otimizacao_woc/gurobi_otimizacao_8_0_5933208.lp
+the bound is 3326720216.0
+The MIPGap is 0.0001803201868519658
+model.Status == GRB.TIME_LIMIT and model.solCount > 0 in the arquive: ./arquivos_otimizacao_woc/gurobi_otimizacao_8_0_4687505.lp
+the bound is 2848160221.541667
+The MIPGap is 0.00046674294856893084
+model.Status == GRB.TIME_LIMIT and model.solCount > 0 in the arquive: ./arquivos_otimizacao_woc/gurobi_otimizacao_8_0_5954163.lp
+the bound is 4150780209.0677185
+The MIPGap is 0.04249373236743968
+model.Status == GRB.TIME_LIMIT and model.solCount > 0 in the arquive: ./arquivos_otimizacao_woc/gurobi_otimizacao_8_0_5929670.lp
+the bound is 3225740200.0
+The MIPGap is 0.0061374145800049415
+model.Status == GRB.TIME_LIMIT and model.solCount > 0 in the arquive: ./arquivos_otimizacao_woc/gurobi_otimizacao_8_0_4085712.lp
+the bound is 5391060197.999999
+The MIPGap is 0.003939116108567887
+model.Status == GRB.TIME_LIMIT and model.solCount > 0 in the arquive: ./arquivos_otimizacao_woc/gurobi_otimizacao_8_0_951044.lp
+the bound is 3682390181.0
+The MIPGap is 0.004659919305193446
+model.Status == GRB.TIME_LIMIT and model.solCount > 0 in the arquive: ./arquivos_otimizacao_woc/gurobi_otimizacao_8_0_2814003.lp
+the bound is 4152333030.5403247
+The MIPGap is 0.003347623036370548
+model.Status == GRB.TIME_LIMIT and model.solCount > 0 in the arquive: ./arquivos_otimizacao_woc/gurobi_otimizacao_8_0_5937429.lp
+the bound is 3753250145.0
+The MIPGap is 0.0018828131384412826
+model.Status == GRB.TIME_LIMIT and model.solCount > 0 in the arquive: ./arquivos_otimizacao_woc/gurobi_otimizacao_8_0_4037042.lp
+the bound is 6431010140.075819
+The MIPGap is 0.014717168348270986
+model.Status == GRB.TIME_LIMIT and model.solCount > 0 in the arquive: ./arquivos_otimizacao_woc/gurobi_otimizacao_8_0_5949615.lp
+the bound is 3346060155.0
+The MIPGap is 0.002117397835729783
+model.Status == GRB.TIME_LIMIT and model.solCount > 0 in the arquive: ./arquivos_otimizacao_woc/gurobi_otimizacao_8_0_5932219.lp
+the bound is 3482440193.3333335
+The MIPGap is 0.0005108726118454638
+model.Status == GRB.TIME_LIMIT and model.solCount > 0 in the arquive: ./arquivos_otimizacao_woc/gurobi_otimizacao_8_0_5952889.lp
+the bound is 2575260237.25
+The MIPGap is 0.005848482497061317
+model.Status == GRB.TIME_LIMIT and model.solCount > 0 in the arquive: ./arquivos_otimizacao_woc/gurobi_otimizacao_8_0_2812064.lp
+the bound is 4357860196.5
+The MIPGap is 0.0026958694596184067
+model.Status == GRB.TIME_LIMIT and model.solCount > 0 in the arquive: ./arquivos_otimizacao_woc/gurobi_otimizacao_8_0_5988231.lp
+the bound is 2653280218.3333335
+The MIPGap is 0.0005273632082666194
+model.Status == GRB.TIME_LIMIT and model.solCount > 0 in the arquive: ./arquivos_otimizacao_woc/gurobi_otimizacao_8_0_5933040.lp
+the bound is 5125140228.5
+The MIPGap is 0.002858066301211222
+model.Status == GRB.TIME_LIMIT and model.solCount > 0 in the arquive: ./arquivos_otimizacao_woc/gurobi_otimizacao_8_0_947235.lp
+the bound is 5533750172.333333
+The MIPGap is 0.011141684025148051
+model.Status == GRB.TIME_LIMIT and model.solCount > 0 in the arquive: ./arquivos_otimizacao_woc/gurobi_otimizacao_8_0_5947037.lp
+the bound is 2577020194.0
+The MIPGap is 0.0002560379699672734
+model.Status == GRB.TIME_LIMIT and model.solCount > 0 in the arquive: ./arquivos_otimizacao_woc/gurobi_otimizacao_8_0_2816785.lp
+the bound is 2693850158.1666665
+The MIPGap is 0.014908823867668647
+model.Status == GRB.TIME_LIMIT and model.solCount > 0 in the arquive: ./arquivos_otimizacao_woc/gurobi_otimizacao_8_0_4060937.lp
+the bound is 6246020230.5
+The MIPGap is 0.004519965405628498
+model.Status == GRB.TIME_LIMIT and model.solCount > 0 in the arquive: ./arquivos_otimizacao_woc/gurobi_otimizacao_8_0_5303600.lp
+the bound is 2938940147.22
+The MIPGap is 0.00042173667108686514
+model.Status == GRB.TIME_LIMIT and model.solCount > 0 in the arquive: ./arquivos_otimizacao_woc/gurobi_otimizacao_8_0_2809391.lp
+the bound is 2494730206.7513814
+The MIPGap is 0.036501028238973915
+model.Status == GRB.TIME_LIMIT and model.solCount > 0 in the arquive: ./arquivos_otimizacao_woc/gurobi_otimizacao_8_0_2809228.lp
+the bound is 3967510219.180024
+The MIPGap is 0.0243307954776567
+model.Status == GRB.TIME_LIMIT and model.solCount > 0 in the arquive: ./arquivos_otimizacao_woc/gurobi_otimizacao_8_0_2821665.lp
+the bound is 4131880166.2380953
+The MIPGap is 0.005245960067609335
+model.Status == GRB.TIME_LIMIT and model.solCount > 0 in the arquive: ./arquivos_otimizacao_woc/gurobi_otimizacao_8_0_2802319.lp
+the bound is 4015130176.854167
+The MIPGap is 0.01564858543956576
+model.Status == GRB.TIME_LIMIT and model.solCount > 0 in the arquive: ./arquivos_otimizacao_woc/gurobi_otimizacao_8_0_2818291.lp
+the bound is 3675060202.0
+The MIPGap is 0.0014454982182771424
+model.Status == GRB.TIME_LIMIT and model.solCount > 0 in the arquive: ./arquivos_otimizacao_woc/gurobi_otimizacao_8_0_5964178.lp
+the bound is 3509070208.133333
+The MIPGap is 0.006680486086848771
+model.Status == GRB.TIME_LIMIT and model.solCount > 0 in the arquive: ./arquivos_otimizacao_woc/gurobi_otimizacao_8_0_5927105.lp
+the bound is 3978460137.2651515
+The MIPGap is 0.011267952757050176
+model.Status == GRB.TIME_LIMIT and model.solCount > 0 in the arquive: ./arquivos_otimizacao_woc/gurobi_otimizacao_8_0_2804681.lp
+the bound is 3394630198.6318254
+The MIPGap is 0.01058598043357026
+model.Status == GRB.TIME_LIMIT and model.solCount > 0 in the arquive: ./arquivos_otimizacao_woc/gurobi_otimizacao_8_0_5907941.lp
+the bound is 4269590111.3333335
+The MIPGap is 0.02542803779553457
+model.Status == GRB.TIME_LIMIT and model.solCount > 0 in the arquive: ./arquivos_otimizacao_woc/gurobi_otimizacao_8_0_2794404.lp
+the bound is 2765280189.6666665
+The MIPGap is 0.0023486580576526418
+model.Status == GRB.TIME_LIMIT and model.solCount > 0 in the arquive: ./arquivos_otimizacao_woc/gurobi_otimizacao_8_0_2815582.lp
+the bound is 5561150202.0
+The MIPGap is 0.00495807535848984
+model.Status == GRB.TIME_LIMIT and model.solCount > 0 in the arquive: ./arquivos_otimizacao_woc/gurobi_otimizacao_8_0_2804706.lp
+the bound is 4354630162.75
+The MIPGap is 0.024181287154619684

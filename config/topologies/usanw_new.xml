@@ -1,0 +1,507 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<network version="1.0">
+ <networkStructure>
+  <nodes coordinatesType="geographical">
+  <node id="Billings">
+    <coordinates>
+     <x>-110.54</x>
+     <y>42.79</y>
+    </coordinates>
+  </node>
+  <node id="Bismarck">
+    <coordinates>
+     <x>-99.77</x>
+     <y>42.30</y>
+    </coordinates>
+   </node>
+   <node id="Ithaca">
+    <coordinates>
+     <x>-69.2</x>
+     <y>44.2</y>
+    </coordinates>
+   </node>
+   <node id="Charleston">
+    <coordinates>
+     <x>-76.2</x>
+     <y>33.53</y>
+    </coordinates>
+   </node>
+   <node id="Charlotte">
+    <coordinates>
+     <x>-80.83</x>
+     <y>35.7</y>
+    </coordinates>
+   </node>
+   <node id="Dallas">
+    <coordinates>
+     <x>-96.77</x>
+     <y>32.79</y>
+    </coordinates>
+   </node>
+  <node id="Denver">
+    <coordinates>
+     <x>-106.87</x>
+     <y>37.20</y>
+    </coordinates>
+  </node>
+  <node id="Columbus">
+    <coordinates>
+     <x>-83.1</x>
+     <y>42.3</y>
+    </coordinates>
+   </node>
+  <node id="El_Paso">
+    <coordinates>
+     <x>-106.44</x>
+     <y>31.85</y>
+    </coordinates>
+   </node>
+  <node id="Kansas_City">
+    <coordinates>
+     <x>-94.73</x>
+     <y>37.66</y>
+    </coordinates>
+   </node>
+  <node id="Las_Vegas">
+    <coordinates>
+     <x>-121.22</x>
+     <y>36.20</y>
+    </coordinates>
+   </node>
+  <node id="Los_Angeles">
+    <coordinates>
+     <x>-122.41</x>
+     <y>34.11</y>
+    </coordinates>
+   </node>
+   <node id="Louisville">
+    <coordinates>
+     <x>-85.74</x>
+     <y>38.22</y>
+    </coordinates>
+   </node>
+   <node id="New_Orleans">
+    <coordinates>
+     <x>-89.93</x>
+     <y>30.07</y>
+    </coordinates>
+   </node>
+   <node id="New_York">
+    <coordinates>
+     <x>-72.94</x>
+     <y>41.67</y>
+    </coordinates>
+   </node>
+   <node id="Birmingham">
+    <coordinates>
+     <x>-86.8</x>
+     <y>33.53</y>
+    </coordinates>
+   </node>
+   <node id="Portland">
+    <coordinates>
+     <x>-127.66</x>
+     <y>41.54</y>
+    </coordinates>
+   </node>
+   <node id="Salt_Lake_City">
+    <coordinates>
+     <x>-115.93</x>
+     <y>37.66</y>
+    </coordinates>
+   </node>
+   <node id="San_Antonio">
+    <coordinates>
+     <x>-98.51</x>
+     <y>29.46</y>
+    </coordinates>
+   </node>
+   <node id="San_Francisco">
+    <coordinates>
+     <x>-128.42</x>
+     <y>37.66</y>
+    </coordinates>
+   </node>
+   <node id="Seattle">
+    <coordinates>
+     <x>-122.35</x>
+     <y>45.63</y> 
+    </coordinates>
+   </node>
+   <node id="Tallahassee">
+    <coordinates>
+     <x>-80.28</x>
+     <y>29.46</y>
+    </coordinates>
+   </node>
+   <node id="Tucson">
+    <coordinates>
+     <x>-112.89</x>
+     <y>32.2</y>
+    </coordinates>
+   </node>
+   <node id="Washington_DC">
+    <coordinates>
+     <x>-77.2</x>
+     <y>37.66</y>
+    </coordinates>
+   </node>
+  </nodes>
+  <links>
+   <link id="L1">
+   	<source>Seattle</source>
+   	<target>Portland</target>
+   </link>
+   <link id="L2">
+   	<source>Portland</source>
+   	<target>San_Francisco</target>
+   </link>
+   <link id="L3">
+   	<source>San_Francisco</source>
+   	<target>Los_Angeles</target>
+   </link>
+   <link id="L4">
+   	<source>San_Francisco</source>
+   	<target>Las_Vegas</target>
+   </link>
+   <link id="L5">
+   	<source>Los_Angeles</source>
+   	<target>Las_Vegas</target>
+   </link>
+   <link id="L6">
+   	<source>San_Francisco</source>
+   	<target>Salt_Lake_City</target>
+   </link>
+   <link id="L7">
+   	<source>Las_Vegas</source>
+   	<target>Salt_Lake_City</target>
+   </link>
+   <link id="L8">
+   	<source>Los_Angeles</source>
+   	<target>Tucson</target>
+   </link>
+   <link id="L9">
+   	<source>Tucson</source>
+   	<target>Salt_Lake_City</target>
+   </link>
+   <link id="L10">
+   	<source>Salt_Lake_City</source>
+   	<target>Billings</target>
+   </link>
+   <link id="L11">
+   	<source>Seattle</source>
+   	<target>Billings</target>
+   </link>
+   <link id="L12">
+   	<source>Billings</source>
+   	<target>Portland</target>
+   </link>
+   <link id="L13">
+   	<source>Billings</source>
+   	<target>Denver</target>
+   </link>
+   <link id="L14">
+   	<source>Denver</source>
+   	<target>Salt_Lake_City</target>
+   </link>
+   <link id="L15">
+   	<source>Denver</source>
+   	<target>El_Paso</target>
+   </link>
+   <link id="L16">
+   	<source>Tucson</source>
+   	<target>El_Paso</target>
+   </link>
+   <link id="L17">
+   	<source>Denver</source>
+   	<target>Bismarck</target>
+   </link>
+   <link id="L18">
+   	<source>Billings</source>
+   	<target>Bismarck</target>
+   </link>
+   <link id="L19">
+   	<source>Kansas_City</source>
+   	<target>Denver</target>
+   </link>
+   <link id="L20">
+   	<source>Kansas_City</source>
+   	<target>Bismarck</target>
+   </link>
+   <link id="L21">
+   	<source>Kansas_City</source>
+   	<target>Dallas</target>
+   </link>
+   <link id="L22">
+   	<source>San_Antonio</source>
+   	<target>Dallas</target>
+   </link>
+   <link id="L23">
+   	<source>El_Paso</source>
+   	<target>Dallas</target>
+   </link>
+   <link id="L24">
+   	<source>El_Paso</source>
+   	<target>San_Antonio</target>
+   </link>
+   <link id="L25">
+   	<source>New_Orleans</source>
+   	<target>Birmingham</target>
+   </link>
+   <link id="L26">
+   	<source>New_Orleans</source>
+   	<target>San_Antonio</target>
+   </link>
+    <link id="L27">
+   	<source>Dallas</source>
+   	<target>Birmingham</target>
+   </link>
+    <link id="L28">
+   	<source>Columbus</source>
+   	<target>Bismarck</target>
+   </link>
+    <link id="L29">
+   	<source>Louisville</source>
+   	<target>Kansas_City</target>
+   </link>
+    <link id="L30">
+   	<source>New_Orleans</source>
+   	<target>Tallahassee</target>
+   </link>
+   <link id="L31">
+   	<source>Charleston</source>
+   	<target>Tallahassee</target>
+   </link>
+    <link id="L32">
+   	<source>Charleston</source>
+   	<target>Birmingham</target>
+   </link>
+    <link id="L33">
+   	<source>Charlotte</source>
+   	<target>Charleston</target>
+   </link>
+    <link id="L34">
+   	<source>Charlotte</source>
+   	<target>Washington_DC</target>
+   </link>
+    <link id="L35">
+   	<source>New_York</source>
+   	<target>Washington_DC</target>
+   </link>
+    <link id="L36">
+   	<source>New_York</source>
+   	<target>Ithaca</target>
+   </link>
+    <link id="L37">
+   	<source>Bismarck</source>
+   	<target>Ithaca</target>
+   </link>
+   <link id="L38">
+   	<source>Columbus</source>
+   	<target>New_York</target>
+   </link>
+    <link id="L39">
+   	<source>Washington_DC</source>
+   	<target>Louisville</target>
+   </link>
+    <link id="L40">
+   	<source>Charlotte</source>
+   	<target>Louisville</target>
+   </link>
+    <link id="L41">
+   	<source>Charlotte</source>
+   	<target>Birmingham</target>
+   </link>
+    <link id="L42">
+   	<source>Birmingham</source>
+   	<target>Louisville</target>
+   </link>
+    <link id="L43">
+   	<source>Louisville</source>
+   	<target>Columbus</target>
+   </link>               
+  </links>
+</networkStructure>
+<disaster_zones>
+    <zone id = 'Z1'>
+      <region id = 'R0'>
+        <disaster_link probability = '1.0'>L25</disaster_link>
+        <disaster_link probability = '1.0'>L26</disaster_link>
+        <disaster_link probability = '1.0'>L30</disaster_link>
+      </region>
+      <region id = 'R1'>
+         <disaster_link probability = '0.73'>L31</disaster_link>
+         <disaster_link probability = '0.73'>L27</disaster_link>
+      </region>
+      <region id = 'R2'>
+        <disaster_link probability = '0.15'>L32</disaster_link>
+        <disaster_link probability = '0.15'>L41</disaster_link>
+      </region>
+      <region id = 'R3'>
+        <disaster_link probability = '0.05'>L33</disaster_link>
+        <disaster_link probability = '0.05'>L22</disaster_link>
+        <disaster_link probability = '0.05'>L42</disaster_link>
+      </region>
+    </zone>
+  <zone id = 'Z2'>
+    <region id = 'R0'>
+      <disaster_link probability = '1.0'>L37</disaster_link>
+      <disaster_link probability = '1.0'>L28</disaster_link>
+    </region>
+	  <region id = 'R1'>
+      <disaster_link probability = '0.73'>L20</disaster_link>
+    </region>
+    <region id = 'R2'>
+      <disaster_link probability = '0.15'>L17</disaster_link>
+      <disaster_link probability = '0.15'>L18</disaster_link>
+    </region>
+    <region id = 'R3'>
+      <disaster_link probability = '0.05'>L19</disaster_link>
+      <disaster_link probability = '0.05'>L29</disaster_link>
+      <disaster_link probability = '0.05'>L43</disaster_link>
+    </region>
+  </zone>
+  <zone id = 'Z3'>
+    <region id = 'R0'>
+	   <disaster_link probability = '1.0'>L9</disaster_link>
+     <disaster_link probability = '1.0'>L15</disaster_link>
+    </region>
+	  <region id = 'R1'>
+     <disaster_link probability = '0.73'>L8</disaster_link>   	
+    </region>
+    <region id = 'R2'>
+      <disaster_link probability = '0.15'>L16</disaster_link>   	
+      <disaster_link probability = '0.15'>L23</disaster_link>   	
+    </region>
+    <region id = 'R3'>
+      <disaster_link probability = '0.05'>L13</disaster_link>
+      <disaster_link probability = '0.05'>L14</disaster_link>
+      <disaster_link probability = '0.05'>L17</disaster_link>
+      <disaster_link probability = '0.05'>L19</disaster_link>
+    </region>
+  </zone>
+  <zone id = 'Z4'>
+    <region id = 'R0'>
+      <disaster_link probability = '1.0'>L13</disaster_link>
+    </region>
+	  <region id = 'R1'>
+      <disaster_link probability = '0.73'>L17</disaster_link>
+    </region>
+    <region id = 'R2'>
+      <disaster_link probability = '0.15'>L14</disaster_link>
+      <disaster_link probability = '0.15'>L19</disaster_link>
+    </region>
+    <region id = 'R3'>
+      <disaster_link probability = '0.05'>L15</disaster_link>
+      <disaster_link probability = '0.05'>L10</disaster_link>
+      <disaster_link probability = '0.05'>L20</disaster_link>
+    </region>
+  </zone>
+    <zone id = 'Z5'>
+    <region id = 'R0'>
+      <disaster_link probability = '1.0'>L39</disaster_link>
+      <disaster_link probability = '1.0'>L40</disaster_link>
+    </region>
+	  <region id = 'R1'>
+      <disaster_link probability = '0.73'>L42</disaster_link>
+    </region>
+    <region id = 'R2'>
+      <disaster_link probability = '0.15'>L34</disaster_link>
+      <disaster_link probability = '0.15'>L43</disaster_link>
+      <disaster_link probability = '0.15'>L29</disaster_link>
+    </region>
+    <region id = 'R3'>
+      <disaster_link probability = '0.05'>L33</disaster_link>
+      <disaster_link probability = '0.05'>L41</disaster_link>
+      <disaster_link probability = '0.05'>L35</disaster_link>
+    </region>
+  </zone>
+  <zone id = 'Z6'>
+    <region id = 'R0'>
+    	<disaster_link probability = '1.0'>L6</disaster_link>
+    </region>
+	  <region id = 'R1'>
+      <disaster_link probability = '0.73'>L4</disaster_link>
+      <disaster_link probability = '0.73'>L7</disaster_link>
+    </region>
+    <region id = 'R2'>
+      <disaster_link probability = '0.15'>L3</disaster_link>
+      <disaster_link probability = '0.15'>L5</disaster_link>
+    </region>
+    <region id = 'R3'>
+      <disaster_link probability = '0.05'>L2</disaster_link>
+      <disaster_link probability = '0.05'>L9</disaster_link>
+      <disaster_link probability = '0.05'>L10</disaster_link>
+    </region>
+  </zone>
+  <zone id = 'Z7'>
+    <region id = 'R0'>
+      <disaster_link probability = '1.0'>L38</disaster_link>
+    </region>
+	  <region id = 'R1'>
+      <disaster_link probability = '0.73'>L37</disaster_link>
+      <disaster_link probability = '0.73'>L35</disaster_link>
+    </region>
+    <region id = 'R2'>
+      <disaster_link probability = '0.15'>L28</disaster_link>
+    </region>
+    <region id = 'R3'>
+      <disaster_link probability = '0.05'>L29</disaster_link>
+      <disaster_link probability = '0.05'>L39</disaster_link>
+    </region>
+  </zone>
+  <zone id = 'Z8'>
+    <region id = 'R0'>
+      <disaster_link probability = '1.0'>L27</disaster_link>
+    </region>
+	  <region id = 'R1'>
+      <disaster_link probability = '0.73'>L21</disaster_link>
+      <disaster_link probability = '0.73'>L25</disaster_link>
+    </region>
+    <region id = 'R2'>
+      <disaster_link probability = '0.15'>L22</disaster_link>
+      <disaster_link probability = '0.15'>L23</disaster_link>
+    </region>
+    <region id = 'R3'>
+      <disaster_link probability = '0.05'>L32</disaster_link>
+      <disaster_link probability = '0.05'>L41</disaster_link>
+    </region>
+    </zone>
+    <zone id = 'Z9'>
+    <region id = 'R0'>
+	    <disaster_link probability = '1.0'>L12</disaster_link>
+    </region>
+	  <region id = 'R1'>
+      <disaster_link probability = '0.73'>L1</disaster_link>
+      <disaster_link probability = '0.73'>L2</disaster_link>
+    </region>
+    <region id = 'R2'>
+      <disaster_link probability = '0.15'>L10</disaster_link>
+      <disaster_link probability = '0.15'>L11</disaster_link>
+    </region>
+    <region id = 'R3'>
+      <disaster_link probability = '0.05'>L13</disaster_link>
+      <disaster_link probability = '0.05'>L14</disaster_link>
+      <disaster_link probability = '0.05'>L6</disaster_link>
+      <disaster_link probability = '0.05'>L7</disaster_link>
+    </region>
+  </zone>
+  <zone id = 'Z10'>
+      <region id = 'R0'>
+        <disaster_link probability = '1.0'>L20</disaster_link>
+      </region>
+      <region id = 'R1'>
+        <disaster_link probability = '0.73'>L19</disaster_link>
+        <disaster_link probability = '0.73'>L29</disaster_link>
+      </region>
+      <region id = 'R2'>
+        <disaster_link probability = '0.15'>L17</disaster_link>
+        <disaster_link probability = '0.15'>L21</disaster_link>
+      </region>
+      <region id = 'R3'>
+        <disaster_link probability = '0.05'>L15</disaster_link>
+        <disaster_link probability = '0.05'>L28</disaster_link>
+    </region>
+  </zone>
+</disaster_zones>
+</network>

@@ -1,0 +1,872 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<network version="1.0">
+ <networkStructure>
+  <nodes coordinatesType="geographical">
+   <node id="Abilene">
+    <coordinates>
+     <x>-99.74</x>
+     <y>32.45</y>
+    </coordinates>
+   </node>
+      <node id="Albany">
+    <coordinates>
+     <x>-73.8</x>
+     <y>42.67</y>
+    </coordinates>
+   </node>
+   <node id="Albuquerque">
+    <coordinates>
+     <x>-106.63</x>
+     <y>35.12</y>
+    </coordinates>
+   </node>
+<node id="Atlanta">
+    <coordinates>
+     <x>-84.42</x>
+     <y>33.76</y>
+    </coordinates>
+   </node>
+<node id="Austin">
+    <coordinates>
+     <x>-97.75</x>
+     <y>30.45</y>
+    </coordinates>
+   </node>
+<node id="Baltimore">
+    <coordinates>
+     <x>-76.61</x>
+     <y>39.3</y>
+    </coordinates>
+   </node>
+<node id="Baton_Rouge">
+    <coordinates>
+     <x>-91.13</x>
+     <y>30.45</y>
+    </coordinates>
+   </node>
+<node id="Billings">
+    <coordinates>
+     <x>-108.54</x>
+     <y>45.79</y>
+    </coordinates>
+   </node>
+   <node id="Birmingham">
+    <coordinates>
+     <x>-86.8</x>
+     <y>33.53</y>
+    </coordinates>
+   </node>
+<node id="Bismarck">
+    <coordinates>
+     <x>-100.77</x>
+     <y>46.81</y>
+    </coordinates>
+   </node>
+<node id="Boston">
+    <coordinates>
+     <x>-71.2</x>
+     <y>42.34</y>
+    </coordinates>
+   </node>
+<node id="Buffalo">
+    <coordinates>
+     <x>-78.86</x>
+     <y>42.89</y>
+    </coordinates>
+   </node>
+<node id="Charleston">
+    <coordinates>
+     <x>-79.2</x>
+     <y>32.79</y>
+    </coordinates>
+   </node>
+<node id="Charlotte">
+    <coordinates>
+     <x>-80.83</x>
+     <y>35.2</y>
+    </coordinates>
+   </node>
+<node id="Chicago">
+    <coordinates>
+     <x>-87.68</x>
+     <y>41.84</y>
+    </coordinates>
+   </node>
+<node id="Cincinnati">
+    <coordinates>
+     <x>-84.51</x>
+     <y>39.14</y>
+    </coordinates>
+   </node>
+<node id="Cleveland">
+    <coordinates>
+     <x>-81.68</x>
+     <y>41.48</y>
+    </coordinates>
+   </node>
+<node id="Columbus">
+    <coordinates>
+     <x>-82.99</x>
+     <y>39.4</y>
+    </coordinates>
+   </node>
+<node id="Dallas">
+    <coordinates>
+     <x>-96.77</x>
+     <y>32.79</y>
+    </coordinates>
+   </node>
+<node id="Denver">
+    <coordinates>
+     <x>-104.87</x>
+     <y>39.77</y>
+    </coordinates>
+   </node>
+<node id="Detroit">
+    <coordinates>
+     <x>-83.1</x>
+     <y>42.38</y>
+    </coordinates>
+   </node>
+<node id="El_Paso">
+    <coordinates>
+     <x>-106.44</x>
+     <y>31.85</y>
+    </coordinates>
+   </node>
+<node id="Fresno">
+    <coordinates>
+     <x>-119.79</x>
+     <y>36.78</y>
+    </coordinates>
+   </node>
+<node id="Greensboro">
+    <coordinates>
+     <x>-79.83</x>
+     <y>36.08</y>
+    </coordinates>
+   </node>
+<node id="Hartford">
+    <coordinates>
+     <x>-72.68</x>
+     <y>41.77</y>
+    </coordinates>
+   </node>
+<node id="Houston">
+    <coordinates>
+     <x>-95.39</x>
+     <y>29.77</y>
+    </coordinates>
+   </node>
+<node id="Jacksonville">
+    <coordinates>
+     <x>-81.66</x>
+     <y>30.33</y>
+    </coordinates>
+   </node>
+<node id="Kansas_City">
+    <coordinates>
+     <x>-94.73</x>
+     <y>39.11</y>
+    </coordinates>
+   </node>
+<node id="Las_Vegas">
+    <coordinates>
+     <x>-115.22</x>
+     <y>36.20</y>
+    </coordinates>
+   </node>
+<node id="Little_Rock">
+    <coordinates>
+     <x>-92.35</x>
+     <y>34.72</y>
+    </coordinates>
+   </node>
+<node id="Long_Island">
+    <coordinates>
+     <x>-73.67</x>
+     <y>40.59</y>
+    </coordinates>
+   </node>
+<node id="Los_Angeles">
+    <coordinates>
+     <x>-118.41</x>
+     <y>34.11</y>
+    </coordinates>
+   </node>
+<node id="Louisville">
+    <coordinates>
+     <x>-85.74</x>
+     <y>38.22</y>
+    </coordinates>
+   </node>
+<node id="Memphis">
+    <coordinates>
+     <x>-90.01</x>
+     <y>35.11</y>
+    </coordinates>
+   </node>
+<node id="Miami">
+    <coordinates>
+     <x>-80.21</x>
+     <y>25.78</y>
+    </coordinates>
+   </node>
+<node id="Milwaukee">
+    <coordinates>
+     <x>-87.97</x>
+     <y>43.06</y>
+    </coordinates>
+   </node>
+<node id="Minneapolis">
+    <coordinates>
+     <x>-93.27</x>
+     <y>44.96</y>
+    </coordinates>
+   </node>
+<node id="Nashville">
+    <coordinates>
+     <x>-86.78</x>
+     <y>36.17</y>
+    </coordinates>
+   </node>
+<node id="New_Orleans">
+    <coordinates>
+     <x>-89.93</x>
+     <y>30.07</y>
+    </coordinates>
+   </node>
+<node id="New_York">
+    <coordinates>
+     <x>-73.94</x>
+     <y>40.67</y>
+    </coordinates>
+   </node>
+   <node id="Newark">
+    <coordinates>
+     <x>-74.17</x>
+     <y>40.72</y>
+    </coordinates>
+   </node>
+   <node id="Norfolk">
+    <coordinates>
+     <x>-76.24</x>
+     <y>36.92</y>
+    </coordinates>
+   </node>
+<node id="Oakland">
+    <coordinates>
+     <x>-122.22</x>
+     <y>37.77</y>
+    </coordinates>
+   </node>
+<node id="Oklahoma_City">
+    <coordinates>
+     <x>-97.51</x>
+     <y>35.47</y>
+    </coordinates>
+   </node>
+<node id="Omaha">
+    <coordinates>
+     <x>-96.01</x>
+     <y>41.26</y>
+    </coordinates>
+   </node>
+<node id="Orlando">
+    <coordinates>
+     <x>-81.37</x>
+     <y>28.5</y>
+    </coordinates>
+   </node>
+<node id="Philadelphia">
+    <coordinates>
+     <x>-75.13</x>
+     <y>40.01</y>
+    </coordinates>
+   </node>
+<node id="Phoenix">
+    <coordinates>
+     <x>-112.06</x>
+     <y>33.54</y>
+    </coordinates>
+   </node>
+<node id="Pittsburgh">
+    <coordinates>
+     <x>-80.13</x>
+     <y>40.3</y>
+    </coordinates>
+   </node>
+<node id="Portland">
+    <coordinates>
+     <x>-122.66</x>
+     <y>45.54</y>
+    </coordinates>
+   </node>
+<node id="Providence">
+    <coordinates>
+     <x>-71.42</x>
+     <y>41.82</y>
+    </coordinates>
+   </node>
+<node id="Raleigh">
+    <coordinates>
+     <x>-78.66</x>
+     <y>35.82</y>
+    </coordinates>
+   </node>
+<node id="Richmond">
+    <coordinates>
+     <x>-77.47</x>
+     <y>37.53</y>
+    </coordinates>
+   </node>
+<node id="Rochester">
+    <coordinates>
+     <x>-77.62</x>
+     <y>43.17</y>
+    </coordinates>
+   </node>
+<node id="Sacramento">
+    <coordinates>
+     <x>-121.47</x>
+     <y>38.57</y>
+    </coordinates>
+   </node>
+<node id="Salt_Lake_City">
+    <coordinates>
+     <x>-111.93</x>
+     <y>40.78</y>
+    </coordinates>
+   </node>
+<node id="San_Antonio">
+    <coordinates>
+     <x>-98.51</x>
+     <y>29.46</y>
+    </coordinates>
+   </node>
+<node id="San_Diego">
+    <coordinates>
+     <x>-117.14</x>
+     <y>32.81</y>
+    </coordinates>
+   </node>
+<node id="San_Francisco">
+    <coordinates>
+     <x>-122.42</x>
+     <y>37.66</y>
+    </coordinates>
+   </node>
+<node id="San_Jose">
+    <coordinates>
+     <x>-121.85</x>
+     <y>37.3</y>
+    </coordinates>
+   </node>
+   <node id="Santa_Barbara">
+    <coordinates>
+     <x>-119.72</x>
+     <y>34.43</y>
+    </coordinates>
+   </node>
+<node id="Scranton">
+    <coordinates>
+     <x>-75.67</x>
+     <y>41.4</y>
+    </coordinates>
+   </node>
+<node id="Seattle">
+    <coordinates>
+     <x>-122.35</x>
+     <y>47.63</y>
+    </coordinates>
+   </node>
+<node id="Spokane">
+    <coordinates>
+     <x>-117.41</x>
+     <y>47.67</y>
+    </coordinates>
+   </node>
+<node id="Springfield">
+    <coordinates>
+     <x>-89.4</x>
+     <y>39.5</y>
+    </coordinates>
+   </node>
+<node id="St_Louis">
+    <coordinates>
+     <x>-90.24</x>
+     <y>38.64</y>
+    </coordinates>
+   </node>
+<node id="Syracuse">
+    <coordinates>
+     <x>-76.14</x>
+     <y>43.04</y>
+    </coordinates>
+   </node>
+<node id="Tallahassee">
+    <coordinates>
+     <x>-84.28</x>
+     <y>30.46</y>
+    </coordinates>
+   </node>
+<node id="Tampa">
+    <coordinates>
+     <x>-82.48</x>
+     <y>27.96</y>
+    </coordinates>
+   </node>
+<node id="Toledo">
+    <coordinates>
+     <x>-83.58</x>
+     <y>41.66</y>
+    </coordinates>
+   </node>
+<node id="Tucson">
+    <coordinates>
+     <x>-110.89</x>
+     <y>32.2</y>
+    </coordinates>
+   </node>
+<node id="Tulsa">
+    <coordinates>
+     <x>-95.92</x>
+     <y>36.13</y>
+    </coordinates>
+   </node>
+<node id="Washington_DC">
+    <coordinates>
+     <x>-77.2</x>
+     <y>38.91</y>
+    </coordinates>
+   </node>
+<node id="West_Palm_Beach">
+    <coordinates>
+     <x>-80.13</x>
+     <y>26.75</y>
+    </coordinates>
+   </node>
+<node id="Wilmington">
+    <coordinates>
+     <x>-75.53</x>
+     <y>39.74</y>
+    </coordinates>
+   </node>
+</nodes>
+   <links>
+   	<link id="L1">
+    		<source>Abilene</source>
+    		<target>Dallas</target>
+	</link>
+   	<link id="L2">
+    		<source>Abilene</source>
+    		<target>El_Paso</target>
+	</link>
+   	<link id="L3">
+    		<source>Albany</source>
+    		<target>Boston</target>
+	</link>
+   	<link id="L4">
+    		<source>Albany</source>
+    		<target>Syracuse</target>
+	</link>
+   	<link id="L5">
+    		<source>Albuquerque</source>
+    		<target>Dallas</target>
+	</link>
+   	<link id="L6">
+    		<source>Albuquerque</source>
+    		<target>Denver</target>
+	</link>
+   	<link id="L7">
+    		<source>Albuquerque</source>
+    		<target>El_Paso</target>
+	</link>
+  	<link id="L8">
+    		<source>Albuquerque</source>
+    		<target>Las_Vegas</target>
+	</link>
+  	<link id="L9">
+    		<source>Atlanta</source>
+    		<target>Birmingham</target>
+	</link>
+  	<link id="L10">
+    		<source>Atlanta</source>
+    		<target>Charlotte</target>
+	</link>
+  	<link id="L11">
+    		<source>Atlanta</source>
+    		<target>Jacksonville</target>
+	</link>
+  	<link id="L12">
+    		<source>Austin</source>
+    		<target>Houston</target>
+	</link>
+  	<link id="L13">
+    		<source>Austin</source>
+    		<target>San_Antonio</target>
+	</link>
+  	<link id="L14">
+    		<source>Baltimore</source>
+    		<target>Philadelphia</target>
+	</link>
+  	<link id="L15">
+    		<source>Baltimore</source>
+    		<target>Pittsburgh</target>
+	</link>
+  	<link id="L16">
+    		<source>Baltimore</source>
+    		<target>Washington_DC</target>
+	</link>
+  	<link id="L17">
+    		<source>Baton_Rouge</source>
+    		<target>Houston</target>
+	</link>
+  	<link id="L18">
+    		<source>Baton_Rouge</source>
+    		<target>New_Orleans</target>
+	</link>
+  	<link id="L19">
+    		<source>Billings</source>
+    		<target>Bismarck</target>
+	</link>
+  	<link id="L20">
+    		<source>Billings</source>
+    		<target>Denver</target>
+	</link>
+  	<link id="L21">
+    		<source>Billings</source>
+    		<target>Spokane</target>
+	</link>
+  	<link id="L22">
+    		<source>Birmingham</source>
+    		<target>Nashville</target>
+	</link>
+  	<link id="L23">
+    		<source>Birmingham</source>
+    		<target>New_Orleans</target>
+	</link>
+  	<link id="L24">
+    		<source>Bismarck</source>
+    		<target>Minneapolis</target>
+	</link>
+  	<link id="L25">
+    		<source>Boston</source>
+    		<target>Providence</target>
+	</link>
+  	<link id="L26">
+    		<source>Buffalo</source>
+    		<target>Cleveland</target>
+	</link>
+  	<link id="L27">
+    		<source>Buffalo</source>
+    		<target>Rochester</target>
+	</link>
+  	<link id="L28">
+    		<source>Charleston</source>
+    		<target>Jacksonville</target>
+	</link>
+  	<link id="L29">
+    		<source>Charleston</source>
+    		<target>Raleigh</target>
+	</link>
+  	<link id="L30">
+    		<source>Charlotte</source>
+    		<target>Greensboro</target>
+	</link>
+  	<link id="L31">
+    		<source>Chicago</source>
+    		<target>Detroit</target>
+	</link>
+  	<link id="L32">
+    		<source>Chicago</source>
+    		<target>Milwaukee</target>
+	</link>
+  	<link id="L33">
+    		<source>Chicago</source>
+    		<target>Springfield</target>
+	</link>
+  	<link id="L34">
+    		<source>Cincinnati</source>
+    		<target>Columbus</target>
+	</link>
+  	<link id="L35">
+    		<source>Cincinnati</source>
+    		<target>Louisville</target>
+	</link>
+  	<link id="L36">
+    		<source>Cincinnati</source>
+    		<target>Washington_DC</target>
+	</link>
+  	<link id="L37">
+    		<source>Cleveland</source>
+    		<target>Columbus</target>
+	</link>
+  	<link id="L38">
+    		<source>Cleveland</source>
+    		<target>Toledo</target>
+	</link>
+  	<link id="L39">
+    		<source>Columbus</source>
+    		<target>Pittsburgh</target>
+	</link>
+  	<link id="L40">
+    		<source>Dallas</source>
+    		<target>Houston</target>
+	</link>
+  	<link id="L41">
+    		<source>Dallas</source>
+    		<target>Little_Rock</target>
+	</link>
+  	<link id="L42">
+    		<source>Dallas</source>
+    		<target>Oklahoma_City</target>
+	</link>
+  	<link id="L43">
+    		<source>Denver</source>
+    		<target>Omaha</target>
+	</link>
+  	<link id="L44">
+    		<source>Denver</source>
+    		<target>Salt_Lake_City</target>
+	</link>
+  	<link id="L45">
+    		<source>Detroit</source>
+    		<target>Toledo</target>
+	</link>
+  	<link id="L46">
+    		<source>El_Paso</source>
+    		<target>San_Antonio</target>
+	</link>
+   	<link id="L47">
+    		<source>El_Paso</source>
+    		<target>Tucson</target>
+	</link>
+  	<link id="L48">
+    		<source>Fresno</source>
+    		<target>Las_Vegas</target>
+	</link>
+  	<link id="L49">
+    		<source>Fresno</source>
+    		<target>Los_Angeles</target>
+	</link>
+  	<link id="L50">
+    		<source>Fresno</source>
+    		<target>Oakland</target>
+	</link>
+  	<link id="L51">
+    		<source>Greensboro</source>
+    		<target>Louisville</target>
+	</link>
+  	<link id="L52">
+    		<source>Greensboro</source>
+    		<target>Raleigh</target>
+	</link>
+  	<link id="L53">
+    		<source>Greensboro</source>
+    		<target>Richmond</target>
+	</link>
+  	<link id="L54">
+    		<source>Hartford</source>
+    		<target>Long_Island</target>
+	</link>
+  	<link id="L55">
+    		<source>Hartford</source>
+    		<target>Providence</target>
+	</link>
+  	<link id="L56">
+    		<source>Jacksonville</source>
+    		<target>Orlando</target>
+	</link>
+  	<link id="L57">
+    		<source>Kansas_City</source>
+    		<target>Omaha</target>
+	</link>
+  	<link id="L58">
+    		<source>Kansas_City</source>
+    		<target>St_Louis</target>
+	</link>
+  	<link id="L59">
+    		<source>Kansas_City</source>
+    		<target>Tulsa</target>
+	</link>
+  	<link id="L60">
+    		<source>Las_Vegas</source>
+    		<target>Phoenix</target>
+	</link>
+  	<link id="L61">
+    		<source>Las_Vegas</source>
+    		<target>Salt_Lake_City</target>
+	</link>
+  	<link id="L62">
+    		<source>Little_Rock</source>
+    		<target>Memphis</target>
+	</link>
+  	<link id="L63">
+    		<source>Long_Island</source>
+    		<target>New_York</target>
+	</link>
+  	<link id="L64">
+    		<source>Los_Angeles</source>
+    		<target>San_Diego</target>
+	</link>
+  	<link id="L65">
+    		<source>Los_Angeles</source>
+    		<target>Santa_Barbara</target>
+	</link>
+  	<link id="L66">
+    		<source>Louisville</source>
+    		<target>Nashville</target>
+	</link>
+  	<link id="L67">
+    		<source>Louisville</source>
+    		<target>St_Louis</target>
+	</link>
+  	<link id="L68">
+    		<source>Memphis</source>
+    		<target>Nashville</target>
+	</link>
+  	<link id="L69">
+    		<source>Miami</source>
+    		<target>Tampa</target>
+	</link>
+  	<link id="L70">
+    		<source>Miami</source>
+    		<target>West_Palm_Beach</target>
+	</link>
+  	<link id="L71">
+    		<source>Milwaukee</source>
+    		<target>Minneapolis</target>
+	</link>
+  	<link id="L72">
+    		<source>Minneapolis</source>
+    		<target>Omaha</target>
+	</link>
+  	<link id="L73">
+    		<source>New_Orleans</source>
+    		<target>Tallahassee</target>
+	</link>
+  	<link id="L74">
+    		<source>New_York</source>
+    		<target>Newark</target>
+	</link>
+  	<link id="L75">
+    		<source>New_York</source>
+    		<target>Scranton</target>
+	</link>
+  	<link id="L76">
+    		<source>New_York</source>
+    		<target>Wilmington</target>
+	</link>
+  	<link id="L77">
+    		<source>Newark</source>
+    		<target>Philadelphia</target>
+	</link>
+  	<link id="L78">
+    		<source>Norfolk</source>
+    		<target>Raleigh</target>
+	</link>
+  	<link id="L79">
+    		<source>Norfolk</source>
+    		<target>Wilmington</target>
+	</link>
+  	<link id="L80">
+    		<source>Oakland</source>
+    		<target>Sacramento</target>
+	</link>
+  	<link id="L81">
+    		<source>Oakland</source>
+    		<target>Salt_Lake_City</target>
+	</link>
+  	<link id="L82">
+    		<source>Oakland</source>
+    		<target>San_Francisco</target>
+	</link>
+  	<link id="L83">
+    		<source>Oklahoma_City</source>
+    		<target>Tulsa</target>
+	</link>
+      	<link id="L84">
+    		<source>Orlando</source>
+    		<target>West_Palm_Beach</target>
+	</link>
+  	<link id="L85">
+    		<source>Philadelphia</source>
+    		<target>Scranton</target>
+	</link>
+  	<link id="L86">
+    		<source>Phoenix</source>
+    		<target>San_Diego</target>
+	</link>
+  	<link id="L87">
+    		<source>Phoenix</source>
+    		<target>Tucson</target>
+	</link>
+  	<link id="L88">
+    		<source>Pittsburgh</source>
+    		<target>Scranton</target>
+	</link>
+  	<link id="L89">
+    		<source>Portland</source>
+    		<target>Sacramento</target>
+	</link>
+  	<link id="L90">
+    		<source>Portland</source>
+    		<target>Salt_Lake_City</target>
+	</link>
+  	<link id="L91">
+    		<source>Portland</source>
+    		<target>Seattle</target>
+	</link>
+  	<link id="L92">
+    		<source>Richmond</source>
+    		<target>Washington_DC</target>
+	</link>
+  	<link id="L93">
+    		<source>Rochester</source>
+    		<target>Syracuse</target>
+	</link>
+  	<link id="L94">
+    		<source>San_Francisco</source>
+    		<target>San_Jose</target>
+	</link>
+  	<link id="L95">
+    		<source>San_Jose</source>
+    		<target>Santa_Barbara</target>
+	</link>
+  	<link id="L96">
+    		<source>Scranton</source>
+    		<target>Syracuse</target>
+	</link>
+  	<link id="L97">
+    		<source>Seattle</source>
+    		<target>Spokane</target>
+	</link>
+  	<link id="L98">
+    		<source>Springfield</source>
+    		<target>St_Louis</target>
+	</link>
+  	<link id="L99">
+    		<source>Tallahassee</source>
+    		<target>Tampa</target>
+	</link>
+</links>
+</networkStructure>
+<disaster_zones>
+  <zone id = 'Z1'>
+    <region id = 'R0'>
+	    <disaster_link probability = '1.0'>L5</disaster_link>
+      	<disaster_link probability = '1.0'>L40</disaster_link>
+    </region>
+	<region id = 'R1'>
+		<disaster_link probability = '0.7'>L6</disaster_link>
+		<disaster_link probability = '0.7'>L7</disaster_link>
+		<disaster_link probability = '0.7'>L8</disaster_link>
+		<disaster_link probability = '0.7'>L41</disaster_link>
+		<disaster_link probability = '0.7'>L42</disaster_link>
+		<disaster_link probability = '0.7'>L12</disaster_link>
+		<disaster_link probability = '0.7'>L17</disaster_link>
+	</region>
+  </zone>
+</disaster_zones>
+</network>
