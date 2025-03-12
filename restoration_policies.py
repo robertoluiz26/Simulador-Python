@@ -13,6 +13,7 @@ import networkx as nx
 import routing_policies
 import os
 import time
+import sys
 
 def services_sorting(self, services: Sequence['Service']):
     sorted_services = []
@@ -887,22 +888,21 @@ class PathRestorationBalancedPropabilitiesAware00(RestorationPolicy):
             return False
     def generate_ILP(self, services: Sequence['Service'], alpha:int):
         #print("ENTROU GENERATE ILP 1")
-        #print("self.cont = ", self.cont)
-        if not os.path.exists("arquivos_otimizacao"):
-            os.makedirs("arquivos_otimizacao")
-        nome = './arquivos_otimizacao/gurobi_otimizacao' + '_'+ str(self.cont) +'_'+ str(alpha)+ "_" +str(int(self.env.current_time))+'.lp'
+        if not os.path.exists("arquivos_debug"):
+            os.makedirs("arquivos_debug")
+        nome = './arquivos_debug/gurobi_otimizacao_ILP'+'_'+ str(alpha)+ "_" +str(int(self.env.current_time))+'.lp'
         #print("nome: ", nome)
-        #print("nome: ", nome)
+        
         sumNormalizedTime = 0
         normalizedRelocationTime = 0 
         normalizedRestorationTime = 0
         greaterRemainingTime = 0  
         usa_tempo = True
         for service in services:
-            #print("service.remaining_time = ", service.remaining_time)
+            ##print("service.remaining_time = ", service.remaining_time)
             if greaterRemainingTime < (service.holding_time - (self.env.current_time - service.arrival_time)):
                 greaterRemainingTime = service.holding_time - self.env.current_time + service.arrival_time
-        print("achou greaterRemainingTime: ", greaterRemainingTime)
+        #print("achou greaterRemainingTime: ", greaterRemainingTime)
 
         
         with open(nome, 'w') as lp:
@@ -1134,13 +1134,13 @@ class PathRestorationBalancedPropabilitiesAware00(RestorationPolicy):
             lp.write("total_cost \n")
             lp.write("wls \n")
             lp.write("END \n")
-            print("SAIU GENERATE ILP")
+            #print("SAIU GENERATE ILP")
     def generate_ILP_prwr(self, services: Sequence['Service'], alpha:int):
         #print("ENTROU GENERATE ILP 1")
         #print("self.cont = ", self.cont)
-        if not os.path.exists("arquivos_otimizacao_woc"):
-            os.makedirs("arquivos_otimizacao_woc")
-        nome = './arquivos_otimizacao_woc/gurobi_otimizacao' + '_'+ str(self.cont) +'_'+ str(alpha)+ "_" +str(int(self.env.current_time))+'.lp'
+        if not os.path.exists("arquivos_debug"):
+            os.makedirs("arquivos_debug")
+        nome = './arquivos_debug/gurobi_otimizacao_PLI_prwr' + '_' + str(alpha)+ "_" +str(int(self.env.current_time))+'.lp'
         #print("nome: ", nome)
         #print("nome: ", nome)
         sumNormalizedTime = 0
@@ -1152,7 +1152,7 @@ class PathRestorationBalancedPropabilitiesAware00(RestorationPolicy):
             #print("service.remaining_time = ", service.remaining_time)
             if greaterRemainingTime < (service.holding_time - (self.env.current_time - service.arrival_time)):
                 greaterRemainingTime = service.holding_time - self.env.current_time + service.arrival_time
-        print("achou greaterRemainingTime: ", greaterRemainingTime)
+        #print("achou greaterRemainingTime: ", greaterRemainingTime)
 
         
         with open(nome, 'w') as lp:
@@ -1360,9 +1360,9 @@ class PathRestorationBalancedPropabilitiesAware00(RestorationPolicy):
     def generate_ILP_hc(self, services: Sequence['Service'], alpha:int):
         #print("ENTROU GENERATE ILP 1")
         #print("self.cont = ", self.cont)
-        if not os.path.exists("arquivos_otimizacao_whc"):
-            os.makedirs("arquivos_otimizacao_whc")
-        nome = './arquivos_otimizacao_whc/gurobi_otimizacao' + '_'+ str(self.cont) +'_'+ str(alpha)+ "_" +str(int(self.env.current_time))+'.lp'
+        if not os.path.exists("arquivos_debug"):
+            os.makedirs("arquivos_debug")
+        nome = './arquivos_debug/gurobi_otimizacao_PLI_HC' +'_'+ str(alpha)+ "_" +str(int(self.env.current_time))+'.lp'
         #print("nome: ", nome)
         #print("nome: ", nome)
         sumNormalizedTime = 0
@@ -1374,7 +1374,7 @@ class PathRestorationBalancedPropabilitiesAware00(RestorationPolicy):
             #print("service.remaining_time = ", service.remaining_time)
             if greaterRemainingTime < (service.holding_time - (self.env.current_time - service.arrival_time)):
                 greaterRemainingTime = service.holding_time - self.env.current_time + service.arrival_time
-        print("achou greaterRemainingTime: ", greaterRemainingTime)
+        #print("achou greaterRemainingTime: ", greaterRemainingTime)
 
         
         with open(nome, 'w') as lp:
@@ -1620,6 +1620,7 @@ class PathRestorationBalancedPropabilitiesAware00(RestorationPolicy):
                     break
         contador = 0
         if flag:
+            print("Entrou na flag")
             services_queda: Sequence['Service'] = []
             for service in services[:]:
                 if (service.holding_time + service.arrival_time - self.env.current_time) < 1800.0:
@@ -1629,21 +1630,25 @@ class PathRestorationBalancedPropabilitiesAware00(RestorationPolicy):
             for service in services_queda:
                 service.route = None
                 self.drop_service(service)
-
+            print("entrou aqui e os services estao aqui")
+            print(services)
 
             while services:
-                #print("EXISTE SERVICES  ")
+                print("EXISTE SERVICES  ")
                 svs = services[:80]
-                #print("len svs: ", len(svs))
-                #print("svs: ", svs)
+                print("len svs: ", len(svs))
+                print("svs: ", svs)
                 if not svs:
                     break
-                #print("dividiu svs em um batch de 80 services")
+                print("dividiu svs em um batch de 80 services")
                 services = services[80:]
-                #print("pega os proximos 80 services")
+                print("pega os proximos 80 services")
                 self.generate_ILP(svs, contador)
-
-               
+                self.generate_ILP_hc(svs,contador)
+                self.generate_ILP_prwr(svs,contador)
+            print("fechou tudo")
+            sys.exit(0)
+            
 
         return services
 class ILP_probability_awareness(RestorationPolicy):

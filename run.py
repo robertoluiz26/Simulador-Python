@@ -38,7 +38,8 @@ def run(uargs):
     #'PR','DNR','PRCA'
     #exec_restoration_policies = ['PRPA','PRwR','PRPA(α=1)','PRPA(α=0.5)','PRPA(α=0.7)','PRPA(α=0.9)'] #,'ILP']
     #exec_restoration_policies = ['PRPA(α=0.5)','ILP']
-    exec_restoration_policies = ['ILP', 'ILP_PRwR', 'ILP_HC']
+    #exec_restoration_policies = ['ILP', 'ILP_PRwR', 'ILP_HC']
+    exec_restoration_policies = ['PRPA(α=0.0)']
     #exec_restoration_policies = ['PRwR','PRPA(α=0.5)']
     #exec_restoration_policies = ['ILP', 'ILP_PRwR', 'ILP_HC','PRwR','PRPA(α=1)','PRPA(α=0.5)','PRPA(α=0.4)','PRPA(α=0.3)','PRPA(α=0.1)']
     #exec_restoration_policies = ['PRPA(α=0.1)', 'PRPA(α=0.5)', 'ILP']
@@ -118,6 +119,8 @@ def run(uargs):
                     restoration_policy_instance = restoration_policies.PathRestorationBalancedPropabilitiesAware03()
                 elif restoration_policy == 'PRPA(α=0.1)':
                     restoration_policy_instance = restoration_policies.PathRestorationBalancedPropabilitiesAware01()
+                elif restoration_policy == 'PRPA(α=0.0)':
+                    restoration_policy_instance = restoration_policies.PathRestorationBalancedPropabilitiesAware00()
                 elif restoration_policy == 'ILP':
                     restoration_policy_instance = restoration_policies.ILP_probability_awareness(cont)
                     cont+=1
