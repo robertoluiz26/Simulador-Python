@@ -5,22 +5,20 @@
 * the Visual Studio Code Server License Terms (https://aka.ms/vscode-server-license) and
 * the Microsoft Privacy Statement (https://privacy.microsoft.com/en-US/privacystatement).
 *
-Server bound to /tmp/code-58f2eda9-d3f0-49d1-a95a-ecf30b1cba4d
-Extension host agent listening on /tmp/code-58f2eda9-d3f0-49d1-a95a-ecf30b1cba4d
+Server bound to /tmp/code-89f9e061-cac8-4198-acc2-97c8db5fc442
+Extension host agent listening on /tmp/code-89f9e061-cac8-4198-acc2-97c8db5fc442
 
-[18:06:58] 
-
-
+[22:20:08] 
 
 
-[18:06:58] Extension host agent started.
-[18:06:59] [<unknown>][7a6e8614][ManagementConnection] New connection established.
-[18:06:59] [<unknown>][46e379a0][ExtensionHostConnection] New connection established.
-[18:06:59] [<unknown>][46e379a0][ExtensionHostConnection] <1531351> Launched Extension Host Process.
-[18:07:05] Getting Manifest... ms-python.debugpy
-[18:07:05] Getting Manifest... ms-python.python
-[18:07:05] Getting Manifest... ms-python.vscode-pylance
-[18:07:05] Installing extension: ms-python.python {
+
+
+[22:20:08] Extension host agent started.
+[22:20:09] [<unknown>][3be34b1e][ExtensionHostConnection] New connection established.
+[22:20:09] [<unknown>][c3f5b6df][ManagementConnection] New connection established.
+[22:20:09] [<unknown>][3be34b1e][ExtensionHostConnection] <1467937> Launched Extension Host Process.
+[22:20:14] Getting Manifest... ms-python.vscode-pylance
+[22:20:14] Installing extension: ms-python.vscode-pylance {
   productVersion: { version: '1.98.1', date: '2025-03-10T15:36:03.957Z' },
   pinned: false,
   operation: 3,
@@ -37,63 +35,10 @@ Extension host agent listening on /tmp/code-58f2eda9-d3f0-49d1-a95a-ecf30b1cba4d
     _fsPath: '/home/robertoluiz/.vscode-server/extensions/extensions.json'
   }
 }
-[18:07:05] Installing extension: ms-python.debugpy {
-  productVersion: { version: '1.98.1', date: '2025-03-10T15:36:03.957Z' },
-  pinned: false,
-  operation: 3,
-  isApplicationScoped: false,
-  donotVerifySignature: false,
-  context: { clientTargetPlatform: 'linux-x64' },
-  profileLocation: Er {
-    scheme: 'file',
-    authority: '',
-    path: '/home/robertoluiz/.vscode-server/extensions/extensions.json',
-    query: '',
-    fragment: '',
-    _formatted: 'file:///home/robertoluiz/.vscode-server/extensions/extensions.json',
-    _fsPath: '/home/robertoluiz/.vscode-server/extensions/extensions.json'
-  }
-}
-[18:07:05] Installing extension: ms-python.vscode-pylance {
-  productVersion: { version: '1.98.1', date: '2025-03-10T15:36:03.957Z' },
-  pinned: false,
-  operation: 3,
-  isApplicationScoped: false,
-  donotVerifySignature: false,
-  context: { clientTargetPlatform: 'linux-x64' },
-  profileLocation: Er {
-    scheme: 'file',
-    authority: '',
-    path: '/home/robertoluiz/.vscode-server/extensions/extensions.json',
-    query: '',
-    fragment: '',
-    _formatted: 'file:///home/robertoluiz/.vscode-server/extensions/extensions.json',
-    _fsPath: '/home/robertoluiz/.vscode-server/extensions/extensions.json'
-  }
-}
-[18:07:05] Getting Manifest... ms-python.python
-[18:07:06] Getting Manifest... ms-python.vscode-pylance
-[18:07:06] Getting Manifest... ms-python.python
-[18:07:06] Getting Manifest... ms-python.debugpy
-[18:07:06] Getting Manifest... ms-python.vscode-pylance
-[18:07:06] Getting Manifest... ms-python.debugpy
-[18:07:07] Extension signature verification result for ms-python.debugpy: Success. Internal Code: 0. Executed: true. Duration: 1169ms.
-[18:07:07] Extension signature verification result for ms-python.python: Success. Internal Code: 0. Executed: true. Duration: 1295ms.
-[18:07:08] Extracted extension to file:///home/robertoluiz/.vscode-server/extensions/ms-python.debugpy-2025.4.1-linux-x64: ms-python.debugpy
-[18:07:08] Renamed to /home/robertoluiz/.vscode-server/extensions/ms-python.debugpy-2025.4.1-linux-x64
-[18:07:08] Marked extension as removed ms-python.debugpy-2025.0.1
-[18:07:08] Extension installed successfully: ms-python.debugpy file:///home/robertoluiz/.vscode-server/extensions/extensions.json
-[18:07:08] Extension signature verification result for ms-python.vscode-pylance: Success. Internal Code: 0. Executed: true. Duration: 876ms.
-[18:07:08] Extracted extension to file:///home/robertoluiz/.vscode-server/extensions/ms-python.python-2025.2.0-linux-x64: ms-python.python
-[18:07:09] Renamed to /home/robertoluiz/.vscode-server/extensions/ms-python.python-2025.2.0-linux-x64
-[18:07:09] Marked extension as removed ms-python.python-2025.0.0
-[18:07:09] Extension installed successfully: ms-python.python file:///home/robertoluiz/.vscode-server/extensions/extensions.json
-[18:07:12] Extracted extension to file:///home/robertoluiz/.vscode-server/extensions/ms-python.vscode-pylance-2025.3.1: ms-python.vscode-pylance
-[18:07:12] Renamed to /home/robertoluiz/.vscode-server/extensions/ms-python.vscode-pylance-2025.3.1
-[18:07:12] Marked extension as removed ms-python.vscode-pylance-2025.2.1
-[18:07:12] Extension installed successfully: ms-python.vscode-pylance file:///home/robertoluiz/.vscode-server/extensions/extensions.json
-[18:08:26] [File Watcher] Unexpected error: inotify_add_watch on '/home/robertoluiz/.vscode-server/data/logs/20250214T003208' failed: No such file or directory (EUNKNOWN) (path: /home)
-[18:08:26] [File Watcher (universal)] inotify_add_watch on '/home/robertoluiz/.vscode-server/data/logs/20250214T003208' failed: No such file or directory
-New EH opened, aborting shutdown
-[18:11:58] New EH opened, aborting shutdown
-[18:56:47] [File Watcher (node.js)] Watcher shutdown because watched path got deleted
+[22:20:16] Getting Manifest... ms-python.python
+[22:20:16] Getting Manifest... ms-python.debugpy
+[22:20:18] Extension signature verification result for ms-python.vscode-pylance: Success. Internal Code: 0. Executed: true. Duration: 873ms.
+[22:20:22] Extracted extension to file:///home/robertoluiz/.vscode-server/extensions/ms-python.vscode-pylance-2025.3.2: ms-python.vscode-pylance
+[22:20:22] Renamed to /home/robertoluiz/.vscode-server/extensions/ms-python.vscode-pylance-2025.3.2
+[22:20:22] Marked extension as removed ms-python.vscode-pylance-2025.3.1
+[22:20:22] Extension installed successfully: ms-python.vscode-pylance file:///home/robertoluiz/.vscode-server/extensions/extensions.json
