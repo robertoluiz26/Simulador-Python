@@ -40,6 +40,7 @@ def run(uargs):
     #exec_restoration_policies = ['PRPA(α=0.5)','ILP']
     #exec_restoration_policies = ['ILP', 'ILP_PRwR', 'ILP_HC']
     exec_restoration_policies = ['PRPA(α=0.0)']
+    # exec_restoration_policies = ['ILP']
     #exec_restoration_policies = ['PRwR','PRPA(α=0.5)']
     #exec_restoration_policies = ['ILP', 'ILP_PRwR', 'ILP_HC','PRwR','PRPA(α=1)','PRPA(α=0.5)','PRPA(α=0.4)','PRPA(α=0.3)','PRPA(α=0.1)']
     #exec_restoration_policies = ['PRPA(α=0.1)', 'PRPA(α=0.5)', 'ILP']
@@ -73,8 +74,9 @@ def run(uargs):
         print('Arguments:'.ljust(width), args, file=file)
 
     # copy current version of files
-    shutil.copytree('./', f'./results/{env.output_folder}/source-code/',
-                    ignore=shutil.ignore_patterns('__pycache__', '*.pyc', '*.md', 'results', 'LICENSE', '*.ipynb', '.git', '.idea', '.gitignore'))
+    # TODO: reactivate this code
+    # shutil.copytree('./', f'./results/{env.output_folder}/source-code/',
+    #                 ignore=shutil.ignore_patterns('__pycache__', '*.pyc', '*.md', 'results', 'LICENSE', '*.ipynb', '.git', '.idea', '.gitignore'))
 
     # preparing the thread-safe data structure to hold the results
     manager = Manager()
@@ -150,11 +152,11 @@ def run(uargs):
                 
                 # if load == 600 and routing_policy == 'CADC':
                 
-                ''' 
+                
                 core.run_simulation(env_t)
                 print("Ran in debug mode... exiting...")
                 exit(0)
-                '''
+                
     logger.debug(f'Starting pool of simulators with {uargs.threads} threads')
     # use the code above to keep updating the final plot as the simulation progresses
     with Pool(processes=uargs.threads) as p:

@@ -35,6 +35,9 @@ class Path:
         self.node_list = node_list
         self.length = length
         self.hops = len(node_list) - 1
+    
+    def __repr__(self):
+        return f"Path(node_list={self.node_list}, length={self.length}, hops={self.hops})"
 
 
 def calculate_geographical_distance(latlong1, latlong2):
@@ -88,7 +91,9 @@ def read_sndlib_topology(file):
     graph.graph["node_indices"] = []
     for idx, node in enumerate(graph.nodes()):
         graph.graph["node_indices"].append(node)
-
+    graph.graph["link_indices"] = []
+    for idx, lnk in enumerate(graph.edges()):
+        graph.graph["link_indices"].append(lnk)
     for idx, lnk in enumerate(graph.edges()):
         graph[lnk[0]][lnk[1]]['link_failure_probability'] = 0
     return graph

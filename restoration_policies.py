@@ -9,11 +9,13 @@ if typing.TYPE_CHECKING:
 from typing import Tuple
 from networkx import Graph
 import math
+import copy
 import networkx as nx
 import routing_policies
 import os
 import time
 import sys
+import gurobipy as gp
 
 def services_sorting(self, services: Sequence['Service']):
     sorted_services = []
@@ -43,7 +45,6 @@ class RestorationPolicy(abc.ABC):
         self.env = None
         self.name = None
 
-    @abc.abstractclassmethod
     def restore(self, services: Sequence['Service']):
         pass
 
@@ -60,6 +61,26 @@ class RestorationPolicy(abc.ABC):
                 print("service holding time == 0 ")"""
 
         service.availability = service.service_time / service.holding_time
+
+
+class ILPRestorationPolicy(RestorationPolicy):
+    def solve_ilp(self, file_name: str):
+        model = gp.read(file_name)
+        model.setParam(gp.GRB.Param.TimeLimit, 120)
+        #model.setParam(GRB.Param.MIPGap, 0.0)  # Definir a tolerância do gap para 0 para resultados mais exatos
+        #model.setParam(GRB.Param.IntegralityFocus, 1)  # Focar mais na integridade das variáveis
+
+        # Otimize o modelo
+        model.optimize()
+        variables = {}
+        model.write(file_name + '.mst')
+        print('saving optimal solution at:', file_name + '.mst')
+        self.variables = {}
+        solution_vars = model.getVars()
+        for var in solution_vars:
+            variables[var.varName] = var.x
+        model.close()
+        return variables
 
 class DoNotRestorePolicy(RestorationPolicy):
     def __init__(self) -> None:
@@ -832,10 +853,11 @@ class PathRestorationBalancedPropabilitiesAware01(RestorationPolicy):
         self.env.failure_probability += falha_total
         return services
 
-class PathRestorationBalancedPropabilitiesAware00(RestorationPolicy):
+class PathRestorationBalancedPropabilitiesAware00(ILPRestorationPolicy):
     def __init__(self) -> None:
         super().__init__()
         self.name = 'PRPA(α=0.0)'
+        self.debug_instance = ILP_probability_awareness(0)
     
     def restore_path(self, service: 'Service') -> bool:
         """
@@ -886,8 +908,9 @@ class PathRestorationBalancedPropabilitiesAware00(RestorationPolicy):
             service.route = None
             print("Nao realocou")
             return False
-    def generate_ILP(self, services: Sequence['Service'], alpha:int):
+    def generate_ILP(self, services: Sequence['Service'], alpha:int, constraints: list[str] = None):
         #print("ENTROU GENERATE ILP 1")
+        assert constraints is None or isinstance(constraints, list)
         if not os.path.exists("arquivos_debug"):
             os.makedirs("arquivos_debug")
         nome = './arquivos_debug/gurobi_otimizacao_ILP'+'_'+ str(alpha)+ "_" +str(int(self.env.current_time))+'.lp'
@@ -1102,6 +1125,10 @@ class PathRestorationBalancedPropabilitiesAware00(RestorationPolicy):
             lp.write(" - restored_time = 0 \n")
             lp.write("unrestored_time + restored_time = " + str(sumNormalizedTime) + "\n")
             #print("binary")
+
+            if constraints is not None:
+                for constraint in constraints:
+                    lp.write(constraint + "\n")
             lp.write("Binary \n")
             for service in services:
                 for node in self.env.topology.nodes():
@@ -1613,10 +1640,15 @@ class PathRestorationBalancedPropabilitiesAware00(RestorationPolicy):
         #services = sorted(services, key=lambda x: x.class_priority*(x.holding_time - (self.env.current_time - x.arrival_time)))
         services = sorted(services, key=lambda x: (x.holding_time - (self.env.current_time - x.arrival_time)), reverse=True)
         flag = False
+        relocated = None
+        previous_path = None
         for service in services:
             if(service.holding_time - (self.env.current_time - service.arrival_time))>1800.0:
+                previous_path = copy.deepcopy(service.route)
                 if self.relocate_restore_path(service):
                     flag = True
+                    print("\n relocou service: ", service)
+                    relocated = service
                     break
         contador = 0
         if flag:
@@ -1631,19 +1663,45 @@ class PathRestorationBalancedPropabilitiesAware00(RestorationPolicy):
                 service.route = None
                 self.drop_service(service)
             print("entrou aqui e os services estao aqui")
-            print(services)
+            # print(services)
 
             while services:
                 print("EXISTE SERVICES  ")
                 svs = services[:80]
-                print("len svs: ", len(svs))
-                print("svs: ", svs)
+                # print("len svs: ", len(svs))
+                # print("svs: ", svs)
                 if not svs:
                     break
-                print("dividiu svs em um batch de 80 services")
+                # print("dividiu svs em um batch de 80 services")
                 services = services[80:]
+
+                # self.debug_instance.restore(svs)
+                
                 print("pega os proximos 80 services")
-                self.generate_ILP(svs, contador)
+                constraints = [
+                    "restored_dc_4688_Birmingham = 0"
+                ]
+                self.generate_ILP(svs, contador, constraints)
+                nome = './arquivos_debug/gurobi_otimizacao_ILP'+'_'+ str(contador)+ "_" +str(int(self.env.current_time))+'.lp'
+                variables = self.solve_ilp(nome)
+                for key in sorted(variables.keys()):
+                    note = ""
+                    if str(relocated.service_id) in key:
+                        value = 0
+                        try:
+                            value = int(variables[key])
+                        except:
+                            pass
+                        if value == 1:
+
+                            if key.startswith('x_'):
+                                link = key.split('_')[2]
+                                link = self.env.topology.graph["link_indices"][int(link)]
+                                note = str(link)
+
+                            print("key: ", key, "\tvalue:", variables[key], "\tnote:", note)
+                print("service: ", relocated.source, relocated.destination)
+                print("previous_path: ", previous_path)
                 self.generate_ILP_hc(svs,contador)
                 self.generate_ILP_prwr(svs,contador)
             print("fechou tudo")
@@ -1943,148 +2001,86 @@ class ILP_probability_awareness(RestorationPolicy):
             services = services[80:]
             #print("pega os proximos 80 services")
             self.generate_ILP(svs, contador)
-            #print("generate PLI")
-        #print("SAIU RESTORE")
-            import gurobipy as gp
-            from gurobipy import GRB
-            from graph import Path
-            #print("Entrou na otimização")
-            # Crie um objeto de modelo
 
             arq = './arquivos_otimizacao/gurobi_otimizacao'+'_'+ str(self.cont) +'_' + str(contador) + "_" + str(int(self.env.current_time)) +'.lp'
             contador += 1
-            # Crie um objeto de modelo
-            model = gp.read(arq)
-            model.setParam(GRB.Param.TimeLimit, 120)
-            #model.setParam(GRB.Param.MIPGap, 0.0)  # Definir a tolerância do gap para 0 para resultados mais exatos
-            #model.setParam(GRB.Param.IntegralityFocus, 1)  # Focar mais na integridade das variáveis
 
-            # Otimize o modelo
-            model.optimize()
-            print("arquivo otimizado foi: " + arq)
-            print("otimizou com sucesso! ")
+            variables = self.solve_ilp(arq)
             
-            # Verifique o status da otimização print("não serviços nao podem ser restaurados")
-            if model.Status == GRB.OPTIMAL or (model.Status == GRB.TIME_LIMIT and model.solCount > 0):   #se a solução for ótima ou achou uma solução dentro do tempo
-                #total hops será o número de wls usadas:
-                tempo += model.Runtime
-                print("É ÓTIMO OU TEM UMA SOLUÇÃO")
-                total_hops += model.getVarByName('wls').x
-                #para cada serviço, verifique qual dc foi utilizado:              
-                for service in svs:
-                    total_length = 0
-                    restaurado = False
-                    path = []
-                    for node in self.env.topology.nodes():
-                        if self.env.topology.nodes[node]['dc']:
-                            name = 'restored_dc_' + str(service.service_id) + '_' + str(node)
-                            if model.getVarByName(name).x == 1: #foi achado o dc para o qual o serviço foi restaurado
-                                #print("É POSSIVEL SER RESTAURADO")
-                                if node != service.destination:
-                                    #print("SERVIÇO REALOCADO")
-                                    service.relocated = True
-                                service.failed = False
-                                failures_list = []
-                                #finished = False
-                                source = service.source
-                                path.append(source)
-                                found = False
-                                while not found:
-                                    #print("WHILE NOT FOUND")
-                                    #print("arq: ", arq)
-                                    #print("serviço: ", service.service_id)
-                                    for nb in list(self.env.topology.neighbors(source)):
-                                        link = self.env.topology[source][nb]
-                                        if link['current_failure_probability'] != 1:
-                                            st = 'x_' + str(service.service_id) + '_' + str(link['id'])
-                                            valor = round(model.getVarByName(st).x)
+            total_hops += variables['wls']
+            #para cada serviço, verifique qual dc foi utilizado:              
+            for service in svs:
+                total_length = 0
+                restaurado = False
+                path = []
+                for node in self.env.topology.nodes():
+                    if self.env.topology.nodes[node]['dc']:
+                        name = 'restored_dc_' + str(service.service_id) + '_' + str(node)
+                        variable = 0
+                        try:
+                            variable = int(variables[name])
+                        except:
+                            pass
+                        if variable == 1: #foi achado o dc para o qual o serviço foi restaurado
+                            #print("É POSSIVEL SER RESTAURADO")
+                            if node != service.destination:
+                                #print("SERVIÇO REALOCADO")
+                                service.relocated = True
+                            service.failed = False
+                            failures_list = []
+                            #finished = False
+                            source = service.source
+                            path.append(source)
+                            found = False
+                            while not found:
+                                #print("WHILE NOT FOUND")
+                                #print("arq: ", arq)
+                                #print("serviço: ", service.service_id)
+                                for nb in list(self.env.topology.neighbors(source)):
+                                    link = self.env.topology[source][nb]
+                                    if link['current_failure_probability'] != 1:
+                                        st = 'x_' + str(service.service_id) + '_' + str(link['id'])
+                                        try:
+                                            valor = round(float(variables[st]))
                                             if valor == 1:
                                                 if nb not in path:
                                                     path.append(nb)
                                                     source = nb
                                                     failures_list.append(1 - link['current_failure_probability'])
                                                     break
-                                    if source == node:
-                                        found = True           
+                                        except:
+                                            pass
+                                if source == node:
+                                    found = True           
 
-                                #print("saiu do for")
-                                failure = 1 
-                                for f in failures_list:
-                                    failure *= f
-                                falha = 1 - failure
-                                service.expected_risk = falha
-                                falha_total += falha
-                                restaurado = True
-                                #print("ACHOU A FALHA ESPERADA")
-                                break
-                        
-                    if not restaurado:
-                        #print("NÃO É POSSÍVEL SER RESTAURADO")
-                        service.route = None
-                        self.drop_service(service)
-
-                    else:
-                        #print("ESTA CALCULANDO A LENGTH")
-                        for i in range(len(path) - 1):
-                            link = self.env.topology[path[i]][path[i + 1]]
-                            total_length += link["length"]
-                        #print("ACHOU A LENGTH")
-                        new_path = Path(path,total_length)
-                        service.route = new_path 
-                        self.env.provision_service(service)        
-                        #print("ACHOU O PATH")
-                #print(f"Valor da função objetivo: {model.objVal}")  
-            elif model.Status == GRB.TIME_LIMIT and model.solCount <= 0:
-                #print("NÃO FOI ENCONTRADA UM PATH POIS ESTOUROU O TEMPO")
-                for service in services:
-                    service.route = None
-                    self.drop_service(service)
-            else:
-                #print("Não foi encontrada uma solução ótima.")
-                for service in svs:
+                            #print("saiu do for")
+                            failure = 1 
+                            for f in failures_list:
+                                failure *= f
+                            falha = 1 - failure
+                            service.expected_risk = falha
+                            falha_total += falha
+                            restaurado = True
+                            #print("ACHOU A FALHA ESPERADA")
+                            break
                     
+                if not restaurado:
+                    #print("NÃO É POSSÍVEL SER RESTAURADO")
                     service.route = None
                     self.drop_service(service)
-            if model.Status == GRB.TIME_LIMIT and model.solCount > 0:
-                diretorio_log = "log_pli"
-                objective_bound = model.ObjBound
-                mipgap = model.MIPGap
-                if not os.path.exists(diretorio_log):
-                    os.makedirs(diretorio_log)
-                arquivo = os.path.join(diretorio_log, "log_pli_gurobi.txt")
+
+                else:
+                    #print("ESTA CALCULANDO A LENGTH")
+                    for i in range(len(path) - 1):
+                        link = self.env.topology[path[i]][path[i + 1]]
+                        total_length += link["length"]
+                    #print("ACHOU A LENGTH")
+                    new_path = Path(path,total_length)
+                    service.route = new_path 
+                    self.env.provision_service(service)        
+                    #print("ACHOU O PATH")
+            #print(f"Valor da função objetivo: {model.objVal}")  
             
-                # Abre o arquivo (cria se não existir) e escreve a mensagem
-                if os.path.exists(arquivo):
-                    # Abre o arquivo em modo de acréscimo ('append')
-                    with open(arquivo, 'a') as f:
-                        f.write('model.Status == GRB.TIME_LIMIT and model.solCount > 0in the arquive: ' + arq + "\n")
-                        f.write("the bound is " + str(objective_bound) + "\n")
-                        f.write("The MIPGap is "+ str(mipgap)+ "\n")
-                else:
-                    # Cria um novo arquivo e escreve a mensagem
-                    with open(arquivo, 'w') as f:
-                        f.write('model.Status == GRB.TIME_LIMIT and model.solCount > 0.\n')
-                        f.write("the bound is " + str(objective_bound) + "\n")
-                        f.write("The MIPGap is "+ str(mipgap)+ "\n")
-            elif model.Status == GRB.TIME_LIMIT and model.solCount <= 0:
-                diretorio_log = "log_pli"
-                objective_bound = model.ObjBound
-                if not os.path.exists(diretorio_log):
-                    os.makedirs(diretorio_log)
-                
-                arquivo = os.path.join(diretorio_log,"log_pli_gurobi_wrong.txt")
-                # Abre o arquivo (cria se não existir) e escreve a mensagem
-                if os.path.exists(arquivo):
-                    # Abre o arquivo em modo de acréscimo ('append')
-                    with open(arquivo, 'a') as f:
-                        f.write('model.Status == GRB.TIME_LIMIT and model.solCount <= 0\n')
-                else:
-                    # Cria um novo arquivo e escreve a mensagem
-                    with open(arquivo, 'w') as f:
-                        f.write('model.Status == GRB.TIME_LIMIT and model.solCount <= 0\n')
-            resultado.extend(svs)
-            model.close()
-            #print("ELE SAI DA EXECUÇÃO")
         resultado.extend(services_queda)
         self.env.restorability_time += tempo
         self.env.failure_probability += falha_total
