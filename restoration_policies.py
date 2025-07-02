@@ -1679,7 +1679,8 @@ class PathRestorationBalancedPropabilitiesAware00(ILPRestorationPolicy):
                 
                 print("pega os proximos 80 services")
                 constraints = [
-                    "restored_dc_4688_Birmingham = 0"
+                    "restored_dc_4688_Birmingham = 0",
+                    "restored_dc_4688_Bismarck + restored_dc_4688_Salt_Lake_City = 1"
                 ]
                 self.generate_ILP(svs, contador, constraints)
                 nome = './arquivos_debug/gurobi_otimizacao_ILP'+'_'+ str(contador)+ "_" +str(int(self.env.current_time))+'.lp'
