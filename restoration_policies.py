@@ -1077,7 +1077,8 @@ class PathRestorationBalancedPropabilitiesAware00(ILPRestorationPolicy):
                         if not first:
                             lp.write(" + ")
                         else:
-                            lp.write("restored_dc_" + str(service.service_id) + "_" + str(node))
+                            first = False
+                        lp.write("restored_dc_" + str(service.service_id) + "_" + str(node))
                 lp.write(" - relocation_" + str (service.service_id) + " = 0 \n") # ERRO: dois tabs a mais nessa linha
             #calcula o numero de realocações realizadas
             #print("#calcula o numero de realocações realizadas")
