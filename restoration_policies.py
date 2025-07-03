@@ -72,15 +72,35 @@ class ILPRestorationPolicy(RestorationPolicy):
 
         # Otimize o modelo
         model.optimize()
-        variables = {}
-        model.write(file_name + '.mst')
-        print('saving optimal solution at:', file_name + '.mst')
-        self.variables = {}
-        solution_vars = model.getVars()
-        for var in solution_vars:
-            variables[var.varName] = var.x
-        model.close()
-        return variables
+        if model.status == gp.GRB.Status.OPTIMAL:
+            variables = {}
+            model.write(file_name + '.mst')
+            print('saving optimal solution at:', file_name + '.mst')
+            self.variables = {}
+            solution_vars = model.getVars()
+            for var in solution_vars:
+                variables[var.varName] = var.x
+            model.close()
+            return variables
+        elif model.status == gp.GRB.Status.TIME_LIMIT:
+            print("Time limit reached")
+            return dict()
+        elif model.status == gp.GRB.Status.INFEASIBLE:
+            print("No solution found")
+            # Get the constraints that make the model infeasible
+            model.computeIIS()
+            print("Infeasible constraints:")
+            with open(file_name + '_infeasible_constraints.txt', 'w') as f:
+                f.write("Infeasible constraints:\n")
+                for constraint in model.getConstrs():
+                    if constraint.IISConstr:
+                        constraint_info = f"  {constraint.ConstrName}: {constraint.ConstrName} {constraint.Sense} {constraint.RHS}"
+                        print(constraint_info)
+                        f.write(constraint_info + '\n')
+            return dict()
+        else:
+            print("No solution found")
+            return dict()
 
 class DoNotRestorePolicy(RestorationPolicy):
     def __init__(self) -> None:
@@ -939,6 +959,7 @@ class PathRestorationBalancedPropabilitiesAware00(ILPRestorationPolicy):
             for service in services:
                 for node in self.env.topology.nodes():
                     first = True
+                    lp.write(f"fc_{service.service_id}_{node}: ")
                     if service.source == node:
                         for nb in list(self.env.topology.neighbors(node)):
                             link = self.env.topology[node][nb]
@@ -975,6 +996,7 @@ class PathRestorationBalancedPropabilitiesAware00(ILPRestorationPolicy):
                 link = self.env.topology[lnk[0]][lnk[1]]
                 if link['current_failure_probability'] != 1:
                     first = True
+                    lp.write(f"ll_{link['id']}: ")
                     for service in services:
                         if not first:
                             lp.write(" + ")
@@ -986,23 +1008,25 @@ class PathRestorationBalancedPropabilitiesAware00(ILPRestorationPolicy):
             for lnk in self.env.topology.edges():
                 link = self.env.topology[lnk[0]][lnk[1]]
                 if link['current_failure_probability'] != 1:
-                    lp.write("load_" + str(self.env.topology[lnk[0]][lnk[1]]['id']) + " <= " + str(self.env.topology[lnk[0]][lnk[1]]['available_units'])+"\n")
+                    lp.write("mll_" + str(self.env.topology[lnk[0]][lnk[1]]['id']) + ": load_" + str(self.env.topology[lnk[0]][lnk[1]]['id']) + " <= " + str(self.env.topology[lnk[0]][lnk[1]]['available_units'])+"\n")
             #print("get required computing units")
             #get required computing units
             for node in self.env.topology.nodes():
                 if self.env.topology.nodes[node]['dc']:
                     first = True
+                    lp.write(f"mldc_{node}: ")
                     for service in services:
                         if not first:
                             lp.write(" + ")
                         else:
                             first = False
-                        lp.write( str(service.computing_units) + " restore_dc_" + str(service.service_id) + "_" + str(node))
+                        lp.write(str(service.computing_units) + " restore_dc_" + str(service.service_id) + "_" + str(node))
                     lp.write(" <= " + str(self.env.topology.nodes[node]['available_units']) + "\n")
             first = True
             total = 0
             #print("calcula as wavelengths utilizadas")
             #calcula as wavelengths utilizadas
+            lp.write("mwls: ")
             for lnk in self.env.topology.edges():
                 link = self.env.topology[lnk[0]][lnk[1]]
                 if link['current_failure_probability'] != 1:
@@ -1015,6 +1039,7 @@ class PathRestorationBalancedPropabilitiesAware00(ILPRestorationPolicy):
             lp.write(" - wls = 0 \n")
             first = True
             #print("restored")
+            lp.write("mrestored: ")
             for service in services:
                 if not first:
                     lp.write(" + ")
@@ -1024,12 +1049,13 @@ class PathRestorationBalancedPropabilitiesAware00(ILPRestorationPolicy):
             lp.write(" - restored = 0 \n")
             #print("serviços restaurados + não restaurados = total de serviços")
             #serviços restaurados + não restaurados = total de serviços
-            lp.write("unrestored + restored = " + str(len(services))+ "\n")
+            lp.write("mserv: unrestored + restored = " + str(len(services))+ "\n")
             
             #print("serviço só pode ser restaurado em um DC")
             #serviço só pode ser restaurado em um DC
             for service in services:
                 first = True
+                lp.write(f"mrestored_dc_{service.service_id}: ")
                 for node in self.env.topology.nodes():
                     if self.env.topology.nodes[node]['dc']:
                         if not first:
@@ -1042,6 +1068,7 @@ class PathRestorationBalancedPropabilitiesAware00(ILPRestorationPolicy):
             #print("#se o serviço precisar ser realocado, só será realocado para um DC")
             for service in services:
                 first = True
+                lp.write(f"mrelocation_{service.service_id}: ")
                 for node in self.env.topology.nodes():
                     #print("Entrou se realocado")
                     #print("service destination: ", service.destination)
@@ -1051,10 +1078,11 @@ class PathRestorationBalancedPropabilitiesAware00(ILPRestorationPolicy):
                             lp.write(" + ")
                         else:
                             lp.write("restored_dc_" + str(service.service_id) + "_" + str(node))
-                        lp.write(" - relocation_" + str (service.service_id) + " = 0 \n")
+                lp.write(" - relocation_" + str (service.service_id) + " = 0 \n") # ERRO: dois tabs a mais nessa linha
             #calcula o numero de realocações realizadas
             #print("#calcula o numero de realocações realizadas")
             first = True
+            lp.write("mrelocations: ")
             for service in services:
                 if not first:
                     lp.write(" + ")
@@ -1064,6 +1092,7 @@ class PathRestorationBalancedPropabilitiesAware00(ILPRestorationPolicy):
             lp.write(" - relocations = 0 \n")
             #print("total_cost")
             first = True
+            lp.write("mtotal_cost: ")
             for service in services:
                 if not first:
                     lp.write(" + ")
@@ -1074,6 +1103,7 @@ class PathRestorationBalancedPropabilitiesAware00(ILPRestorationPolicy):
             #print("probability")
             for service in services:
                 first = True
+                lp.write(f"mprob_{service.service_id}: ")
                 for lnk in self.env.topology.edges():
                     link = self.env.topology[lnk[0]][lnk[1]]
                     if link['current_failure_probability'] != 1:
@@ -1091,6 +1121,7 @@ class PathRestorationBalancedPropabilitiesAware00(ILPRestorationPolicy):
                     
                 lp.write(" - path_" + str(service.service_id) + " = 0\n")
             first = True
+            lp.write("mrestored_time: ")
             factor = 10000
             lightSpeed = 300000
             #print("unrestored time")
@@ -1123,7 +1154,7 @@ class PathRestorationBalancedPropabilitiesAware00(ILPRestorationPolicy):
                                     first = False
                                 lp.write(str(normalizedRemainingTime - normalizedRelocationTime) + " restored_dc_" + str(service.service_id) + "_" + str(node))
             lp.write(" - restored_time = 0 \n")
-            lp.write("unrestored_time + restored_time = " + str(sumNormalizedTime) + "\n")
+            lp.write("mtotaltime: unrestored_time + restored_time = " + str(sumNormalizedTime) + "\n")
             #print("binary")
 
             if constraints is not None:
@@ -1679,8 +1710,7 @@ class PathRestorationBalancedPropabilitiesAware00(ILPRestorationPolicy):
                 
                 print("pega os proximos 80 services")
                 constraints = [
-                    "restored_dc_4688_Birmingham = 0",
-                    "restored_dc_4688_Bismarck + restored_dc_4688_Salt_Lake_City = 1"
+                    "imposed_1: relocation_4688 = 1",
                 ]
                 self.generate_ILP(svs, contador, constraints)
                 nome = './arquivos_debug/gurobi_otimizacao_ILP'+'_'+ str(contador)+ "_" +str(int(self.env.current_time))+'.lp'
@@ -2007,7 +2037,10 @@ class ILP_probability_awareness(RestorationPolicy):
             contador += 1
 
             variables = self.solve_ilp(arq)
-            
+            if variables is None:
+                print("No solution found")
+            else:
+                print("Solution found")
             total_hops += variables['wls']
             #para cada serviço, verifique qual dc foi utilizado:              
             for service in svs:
